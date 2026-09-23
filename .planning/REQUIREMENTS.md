@@ -9,7 +9,7 @@
 
 - [x] **BRND-01**: Visitante vê o nome Winner Tech como marca pública da página
 - [x] **BRND-02**: Visitante não vê "Winner Tecnologia da Informação" como título
-- [ ] **BRND-03**: Visitante vê a marca gráfica W branca sem fundo azul obrigatório na página
+- [x] **BRND-03**: Visitante vê a marca gráfica W branca sem fundo azul obrigatório na página
 - [x] **BRND-04**: Visitante lê no hero que a Winner Tech faz sistemas e pode ser contratada
 
 ### Portfólio
@@ -22,32 +22,32 @@
 
 ### Prova
 
-- [ ] **CASE-01**: Visitante abre o case Alfa Papéis em https://alfapapeis.ind.br/
-- [ ] **CASE-02**: Visitante vê Posto Marinheiro como case do Laço
-- [ ] **CASE-03**: Visitante lê um bloco desafio → solução nos cases reais, sem número ou depoimento inventado
-- [ ] **CASE-04**: Visitante vê só as verticais já ditas do Laço: postos, conveniência, autocenters, farmácias, supermercado, food, pet/ótica, academias
-- [ ] **CASE-05**: Visitante vê imagem real de interface do Zelo e do Laço
-- [ ] **CASE-06**: Visitante não vê screenshot inventado da Frutmix
+- [x] **CASE-01**: Visitante abre o case Alfa Papéis em https://alfapapeis.ind.br/
+- [x] **CASE-02**: Visitante vê Posto Marinheiro como case do Laço
+- [x] **CASE-03**: Visitante lê um bloco desafio → solução nos cases reais, sem número ou depoimento inventado
+- [x] **CASE-04**: Visitante vê só as verticais já ditas do Laço: postos, conveniência, autocenters, farmácias, supermercado, food, pet/ótica, academias
+- [x] **CASE-05**: Visitante vê imagem real de interface do Zelo e do Laço
+- [x] **CASE-06**: Visitante não vê screenshot inventado da Frutmix
 
 ### Contato
 
 - [x] **CTA-01**: Visitante abre WhatsApp +55 62 99828-6169 por um controle no fluxo da página
-- [ ] **CTA-02**: Visitante abre o mesmo WhatsApp por um controle flutuante que permanece alcançável
-- [ ] **CTA-03**: Mensagem do WhatsApp já vem preenchida com o sistema que o visitante estava vendo
+- [x] **CTA-02**: Visitante abre o mesmo WhatsApp por um controle flutuante que permanece alcançável
+- [x] **CTA-03**: Mensagem do WhatsApp já vem preenchida com o sistema que o visitante estava vendo
 
 ### Movimento
 
-- [ ] **MOTN-01**: Visitante vê movimento de entrada e continuidade no scroll entre marca e sistemas
-- [ ] **MOTN-02**: Visitante com preferência de movimento reduzido lê a página inteira sem essa coreografia
-- [ ] **MOTN-03**: Cor da página é específica e chamativa, fora da paleta genérica de landing gerada por modelo
+- [x] **MOTN-01**: Visitante vê movimento de entrada e continuidade no scroll entre marca e sistemas
+- [x] **MOTN-02**: Visitante com preferência de movimento reduzido lê a página inteira sem essa coreografia
+- [x] **MOTN-03**: Cor da página é específica e chamativa, fora da paleta genérica de landing gerada por modelo
 
 ### Base
 
 - [x] **BASE-01**: Todo texto de interface está em português
-- [ ] **BASE-02**: Visitante usa a página no celular e no desktop sem scroll horizontal
-- [ ] **BASE-03**: Link compartilhado mostra título, descrição e imagem Open Graph
-- [ ] **BASE-04**: Visitante alcança cada controle pelo teclado, com foco visível e alternativa de texto nas imagens
-- [ ] **BASE-05**: Clique no WhatsApp registra um evento que diz qual sistema originou o clique
+- [x] **BASE-02**: Visitante usa a página no celular e no desktop sem scroll horizontal
+- [x] **BASE-03**: Link compartilhado mostra título, descrição e imagem Open Graph
+- [x] **BASE-04**: Visitante alcança cada controle pelo teclado, com foco visível e alternativa de texto nas imagens
+- [x] **BASE-05**: Clique no WhatsApp registra um evento que diz qual sistema originou o clique
 
 ## User Stories
 
@@ -107,30 +107,30 @@
 |-------------|-------|--------|
 | BRND-01 | Phase 1 | Complete |
 | BRND-02 | Phase 1 | Complete |
-| BRND-03 | Phase 2 | Pending |
+| BRND-03 | Phase 2 | Complete |
 | BRND-04 | Phase 1 | Complete |
 | PROD-01 | Phase 1 | Complete |
 | PROD-02 | Phase 1 | Complete |
 | PROD-03 | Phase 1 | Complete |
 | PROD-04 | Phase 1 | Complete |
 | PROD-05 | Phase 1 | Complete |
-| CASE-01 | Phase 2 | Pending |
-| CASE-02 | Phase 2 | Pending |
-| CASE-03 | Phase 2 | Pending |
-| CASE-04 | Phase 2 | Pending |
-| CASE-05 | Phase 2 | Pending |
-| CASE-06 | Phase 2 | Pending |
+| CASE-01 | Phase 2 | Complete |
+| CASE-02 | Phase 2 | Complete |
+| CASE-03 | Phase 2 | Complete |
+| CASE-04 | Phase 2 | Complete |
+| CASE-05 | Phase 2 | Complete |
+| CASE-06 | Phase 2 | Complete |
 | CTA-01 | Phase 1 | Complete |
-| CTA-02 | Phase 3 | Pending |
-| CTA-03 | Phase 3 | Pending |
-| MOTN-01 | Phase 3 | Pending |
-| MOTN-02 | Phase 3 | Pending |
-| MOTN-03 | Phase 2 | Pending |
+| CTA-02 | Phase 3 | Complete |
+| CTA-03 | Phase 3 | Complete |
+| MOTN-01 | Phase 3 | Complete |
+| MOTN-02 | Phase 3 | Complete |
+| MOTN-03 | Phase 2 | Complete |
 | BASE-01 | Phase 1 | Complete |
-| BASE-02 | Phase 2 | Pending |
-| BASE-03 | Phase 2 | Pending |
-| BASE-04 | Phase 2 | Pending |
-| BASE-05 | Phase 3 | Pending |
+| BASE-02 | Phase 2 | Complete |
+| BASE-03 | Phase 2 | Complete |
+| BASE-04 | Phase 2 | Complete |
+| BASE-05 | Phase 3 | Complete |
 
 **Coverage:**
 

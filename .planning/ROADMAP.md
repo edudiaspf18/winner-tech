@@ -17,8 +17,8 @@ Greenfield institutional site: visitor recognizes Winner Tech, understands four 
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 - [x] **Phase 1: Product truth + hire path** - Brand, four systems with honest depth, Portuguese copy, baseline WhatsApp (completed 2026-09-23)
-- [ ] **Phase 2: Visual proof + layout quality** - Striking brand composition, real cases/media, responsive/OG/a11y
-- [ ] **Phase 3: Motion craft + CTA continuity** - Scroll storytelling with reduced-motion path, floating product-aware WhatsApp, click events
+- [x] **Phase 2: Visual proof + layout quality** - Striking brand composition, real cases/media, responsive/OG/a11y (completed 2026-09-23)
+- [x] **Phase 3: Motion craft + CTA continuity** - Scroll storytelling with reduced-motion path, floating product-aware WhatsApp, click events (completed 2026-09-23)
 
 ## Phase Details
 
@@ -87,8 +87,8 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Product truth + hire path | 1/1 | Complete    | 2026-09-23 |
-| 2. Visual proof + layout quality | 0/TBD | Not started | - |
-| 3. Motion craft + CTA continuity | 0/TBD | Not started | - |
+| 2. Visual proof + layout quality | 1/1 | Complete    | 2026-09-23 |
+| 3. Motion craft + CTA continuity | 1/1 | Complete    | 2026-09-23 |
 
 ## Coverage Validation
 
