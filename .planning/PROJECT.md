@@ -2,7 +2,7 @@
 
 ## What This Is
 
-Site institucional da Winner Tech para apresentar os sistemas próprios e ser contratada. O visitante vê quatro produtos — Zelo, Alfa, Frutmix e Laço — cada um com a função e o nicho em que opera, e sai com um caminho claro para falar com a empresa.
+Site institucional da Winner Tech para apresentar os sistemas próprios e ser contratada. Além dos quatro sistemas, a Winner Tech faz o site do negócio do cliente. Essa oferta é a linha mais forte do hero. O site do cliente não é um quinto produto. O visitante vê Zelo, Alfa, Frutmix e Laço, cada um com a função e o nicho em que opera, e sai com um caminho claro para falar com a empresa.
 
 A marca pública é **Winner Tech**. "Winner Tecnologia da Informação" é o nome antigo e não entra como título do site.
 
@@ -99,6 +99,7 @@ Público do site: quem pode contratar a Winner Tech, não o usuário final de ca
 | CTA WhatsApp +55 62 99828-6169 | Número já publicado na landing do Laço; confirmado na síntese | — Pending |
 | Frutmix citada sem codebase local | Eduardo: não está aqui, pode citar; mesmo escopo industrial do Alfa | — Pending |
 | Texto em português | Brief e produtos são em português, público no Brasil | — Pending |
+| Oferta de site no hero, mais forte que a lista de sistemas | Eduardo: fazemos o sistema e o site do negócio, e isso chama mais atenção. Não é quinto produto. | — Pending |
 
 ## Evolution
 
@@ -118,4 +119,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-09-23 after craft references*
+*Last updated: 2026-09-23 after phase 1 context*
