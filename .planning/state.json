@@ -1,0 +1,28 @@
+{
+  "contract": "1.0.0",
+  "flavor": "core",
+  "milestone": "v1.0 — MVP",
+  "phases": [
+    {
+      "number": "1",
+      "name": "Product truth + hire path",
+      "status": "complete"
+    },
+    {
+      "number": "2",
+      "name": "Visual proof + layout quality",
+      "status": "complete"
+    },
+    {
+      "number": "3",
+      "name": "Motion craft + CTA continuity",
+      "status": "complete"
+    }
+  ],
+  "next": {
+    "command": "/gsd:progress",
+    "label": "Show progress",
+    "reason": "Unsure of state — showing progress"
+  },
+  "updated_at": "2026-09-23T05:41:55.435Z"
+}
