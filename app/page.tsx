@@ -1,22 +1,24 @@
+import { CaseBlocks, ProofPanels } from "@/components/case-blocks";
 import { ClosingHire } from "@/components/closing-hire";
+import { FloatingCta } from "@/components/floating-cta";
 import { Hero } from "@/components/hero";
-import { ProductBlock } from "@/components/product-block";
+import { MarqueeStrip } from "@/components/marquee-strip";
+import { ProductRail } from "@/components/product-rail";
 import { SiteHeader } from "@/components/site-header";
-import { PRODUCTS } from "@/lib/content";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-full flex-col bg-white text-zinc-900">
+    <div className="relative min-h-full overflow-x-clip bg-[var(--bg)] text-[var(--ink)]">
       <SiteHeader />
-      <main className="mx-auto w-full max-w-3xl flex-1">
+      <main>
         <Hero />
-        <section id="sistemas" className="px-6 pb-8" aria-label="Sistemas">
-          {PRODUCTS.map((product) => (
-            <ProductBlock key={product.name} product={product} />
-          ))}
-        </section>
+        <MarqueeStrip />
+        <ProductRail />
+        <CaseBlocks />
+        <ProofPanels />
         <ClosingHire />
       </main>
+      <FloatingCta />
     </div>
   );
 }
