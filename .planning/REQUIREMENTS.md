@@ -8,17 +8,17 @@
 
 ### Discovery
 
-- [ ] **DISC-01**: Visitante entra por um caminho de nicho (loja automotiva, indústria, fidelidade) se a vitrine única não bastar
-- [ ] **DISC-02**: Visitante lê um "Sobre" curto e chega ao CTA de contratar
+- [x] **DISC-01**: Visitante entra por um caminho de nicho (loja automotiva, indústria, fidelidade) se a vitrine única não bastar
+- [x] **DISC-02**: Visitante lê um "Sobre" curto e chega ao CTA de contratar
 
 ### Approved proof
 
-- [ ] **CASE-07**: Visitante lê depoimento ou métrica só quando o Eduardo entregar o dado; sem entrada aprovada, a seção não aparece
+- [x] **CASE-07**: Visitante lê depoimento ou métrica só quando o Eduardo entregar o dado; sem entrada aprovada, a seção não aparece
 
 ### Analytics
 
-- [ ] **ANAL-01**: Site carrega GA4 quando `NEXT_PUBLIC_GA_MEASUREMENT_ID` está definido; sem ID, não carrega script de terceiros
-- [ ] **ANAL-02**: Clique em "Quero contratar" envia evento `hire_whatsapp_click` com `origin` para o dataLayer/GA4
+- [x] **ANAL-01**: Site carrega GA4 quando `NEXT_PUBLIC_GA_MEASUREMENT_ID` está definido; sem ID, não carrega script de terceiros
+- [x] **ANAL-02**: Clique em "Quero contratar" envia evento `hire_whatsapp_click` com `origin` para o dataLayer/GA4
 
 ## Future Requirements
 
@@ -43,11 +43,11 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DISC-01 | Phase 4 | Pending |
-| DISC-02 | Phase 4 | Pending |
-| CASE-07 | Phase 5 | Pending |
-| ANAL-01 | Phase 6 | Pending |
-| ANAL-02 | Phase 6 | Pending |
+| DISC-01 | Phase 4 | Complete |
+| DISC-02 | Phase 4 | Complete |
+| CASE-07 | Phase 5 | Complete |
+| ANAL-01 | Phase 6 | Complete |
+| ANAL-02 | Phase 6 | Complete |
 
 **Coverage:**
 - v2 requirements: 5 total
@@ -56,4 +56,4 @@
 
 ---
 *Requirements defined: 2026-09-23*  
-*Last updated: 2026-09-23 after new-milestone v2.0*
+*Last updated: 2026-09-23 after Phases 4–6 execute*

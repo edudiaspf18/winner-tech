@@ -46,12 +46,13 @@ Um visitante entende, em uma passagem, o que a Winner Tech faz, para quem cada s
 - ✓ Paleta operacional específica (não visual genérico de IA) — v1.0
 - ✓ Layout mobile/desktop + OG + a11y básicos — v1.0
 - ✓ CTA flutuante com prefill por sistema + origem do clique — v1.0
+- ✓ Discovery por nicho (`/para/…`) + Sobre — v2.0
+- ✓ Depoimento/métrica só com dado aprovado (seção omitida se vazio) — v2.0
+- ✓ GA4 condicional + evento `hire_whatsapp_click` — v2.0
 
 ### Active
 
-- [ ] DISC-01 / DISC-02 — discovery por nicho + Sobre
-- [ ] CASE-07 — depoimento/métrica só com dado aprovado
-- [ ] ANAL-01 / ANAL-02 — GA4 real + hire click events
+- [ ] CONT-* growth (blog, product URLs, vagas, i18n) — futuro
 
 ### Out of Scope
 
