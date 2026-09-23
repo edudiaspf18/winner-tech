@@ -16,7 +16,7 @@ Greenfield institutional site: visitor recognizes Winner Tech, understands four 
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Product truth + hire path** - Brand, four systems with honest depth, Portuguese copy, baseline WhatsApp
+- [x] **Phase 1: Product truth + hire path** - Brand, four systems with honest depth, Portuguese copy, baseline WhatsApp (completed 2026-09-23)
 - [ ] **Phase 2: Visual proof + layout quality** - Striking brand composition, real cases/media, responsive/OG/a11y
 - [ ] **Phase 3: Motion craft + CTA continuity** - Scroll storytelling with reduced-motion path, floating product-aware WhatsApp, click events
 
@@ -36,7 +36,7 @@ Greenfield institutional site: visitor recognizes Winner Tech, understands four 
   4. Visitor opens WhatsApp +55 62 99828-6169 from an in-flow control on the page
   5. Every interface string on the page is in Portuguese
 
-**Plans:** 1/1 plans executed
+**Plans:** 1/1 plans complete
 Plans:
 
 - [x] 01-01-PLAN.md — Next.js scaffold + Portuguese content shell + two shared wa.me hire CTAs
@@ -86,7 +86,7 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Product truth + hire path | 1/1 | In Progress|  |
+| 1. Product truth + hire path | 1/1 | Complete    | 2026-09-23 |
 | 2. Visual proof + layout quality | 0/TBD | Not started | - |
 | 3. Motion craft + CTA continuity | 0/TBD | Not started | - |
 

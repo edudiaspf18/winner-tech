@@ -21,22 +21,24 @@ Um visitante entende, em uma passagem, o que a Winner Tech faz, para quem cada s
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Visitante reconhece a marca Winner Tech no header e no título do documento — Phase 1
+- ✓ Visitante vê os quatro sistemas: Zelo, Alfa, Frutmix e Laço — Phase 1
+- ✓ Cada sistema declara a função e o nicho em que opera — Phase 1
+- ✓ Zelo como operação de loja (placa, vaga, PIX, WhatsApp, computador e celular; estética, lava-jato, oficina) — Phase 1
+- ✓ Alfa como sistema industrial (cadastro, produção, nota fiscal, relatórios) — Phase 1
+- ✓ Frutmix no mesmo escopo industrial do Alfa, sem inventar módulos — Phase 1
+- ✓ Laço como fidelidade white-label (app cliente, app equipe, painel, marca) — Phase 1
+- ✓ Chamada para contratar abre WhatsApp +55 62 99828-6169 com mensagem travada — Phase 1
+- ✓ Texto do site em português — Phase 1
+- ✓ Oferta de site no hero, mais forte que a lista; não é quinto produto — Phase 1
 
 ### Active
 
-- [ ] Visitante reconhece a marca Winner Tech e a marca gráfica (W branco) sem depender do fundo azul do arquivo da logo
-- [ ] Visitante vê os quatro sistemas: Zelo, Alfa, Frutmix e Laço
-- [ ] Cada sistema declara a função e o nicho em que opera
-- [ ] Zelo aparece como operação de loja que recebe carro: estética automotiva, lava-jato e oficina (placa, vaga, PIX, WhatsApp, computador e celular)
-- [ ] Alfa aparece como sistema completo de indústria: cadastro, produção, nota fiscal (emitir), relatórios. Case público: Alfa Papéis (https://alfapapeis.ind.br/)
-- [ ] Frutmix aparece no mesmo escopo industrial do Alfa (cadastro, produção, nota fiscal, relatórios), mesmo sem o código nesta máquina
-- [ ] Laço aparece como fidelidade white-label (app do cliente, app da equipe, painel, marca do negócio). Case: Posto Marinheiro. Verticais já ditas no produto: postos, conveniência, autocenters, farmácias, supermercado, food, pet/ótica, academias
+- [ ] Visitante reconhece a marca gráfica (W branco) sem depender do fundo azul do arquivo da logo
+- [ ] Alfa Papéis e Posto Marinheiro como cases públicos com prova visual (ainda só copy na Phase 1)
 - [ ] O site se move: scroll, entrada e continuidade espacial no nível de sites de produto (referência de ofício: Apple, Samsung, Disney, Netflix) sem copiar layout nem marca deles
 - [ ] Cor e composição chamam atenção. Visual robusto, específico, não o visual genérico de landing gerada por IA
-- [ ] Chamada para contratar abre conversa no WhatsApp +55 62 99828-6169
-- [ ] Texto do site em português
-- [ ] Layout funciona em celular e em desktop
+- [ ] Layout funciona bem em celular e em desktop (baseline Phase 1; qualidade Phase 2)
 
 ### Out of Scope
 
@@ -82,24 +84,24 @@ Público do site: quem pode contratar a Winner Tech, não o usuário final de ca
 - **Visual**: movimento e cor forte; proibido o visual padrão de template de IA (gradiente roxo, cards iguais, hero centralizado sem ideia, brutalismo cru, monocromático com acento azul de dashboard)
 - **Ofício visual**: técnicas das referências abaixo. Identidade, layout, logo, copy e paleta dessas marcas ficam de fora.
 - **Idioma**: português
-- **Stack**: ainda não escolhida. Repo sem `package.json`. Pesquisa de stack vem depois deste documento.
+- **Stack**: Next.js App Router + Tailwind (Phase 1). GSAP/Lenis/WebGL entram nas fases 2–3.
 - **Contato**: um canal, WhatsApp +55 62 99828-6169
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Nome público Winner Tech | Eduardo: "Winner Tecnologia da Informação" é o nome antigo | — Pending |
-| Quatro produtos na vitrine: Zelo, Alfa, Frutmix, Laço | Pedido explícito; cada um com nicho | — Pending |
-| Site institucional para ser contratada, não os sistemas em si | Objetivo "para sermos contratados" | — Pending |
-| Logo W branca; fundo azul do arquivo não é o fundo do site | Eduardo: logo é boa; azul de fundo não precisa | — Pending |
-| Direção visual com movimento e cor que chama atenção, fora do visual genérico de IA | Pedido explícito | — Pending |
-| Ofício das referências, sem clonar marca | Eduardo passou Apple (MacBook Pro, iPhone), Disney+, Netflix, Linear, Raycast, Lusion, Active Theory. Técnica sim. Identidade não. Brutalismo/azul de dashboard da busca automática foi descartado. | — Pending |
-| Uma cena WebGL, scroll GSAP no resto | Lusion e Active Theory pedem imersão. Entregar estúdio 3D inteiro estoura o v1. Cena assinatura + capítulos presos. | — Pending |
-| CTA WhatsApp +55 62 99828-6169 | Número já publicado na landing do Laço; confirmado na síntese | — Pending |
-| Frutmix citada sem codebase local | Eduardo: não está aqui, pode citar; mesmo escopo industrial do Alfa | — Pending |
-| Texto em português | Brief e produtos são em português, público no Brasil | — Pending |
-| Oferta de site no hero, mais forte que a lista de sistemas | Eduardo: fazemos o sistema e o site do negócio, e isso chama mais atenção. Não é quinto produto. | — Pending |
+| Nome público Winner Tech | Eduardo: "Winner Tecnologia da Informação" é o nome antigo | Phase 1: title/header Winner Tech |
+| Quatro produtos na vitrine: Zelo, Alfa, Frutmix, Laço | Pedido explícito; cada um com nicho | Phase 1: quatro blocos na ordem travada |
+| Site institucional para ser contratada, não os sistemas em si | Objetivo "para sermos contratados" | Phase 1: brochure + hire path |
+| Logo W branca; fundo azul do arquivo não é o fundo do site | Eduardo: logo é boa; azul de fundo não precisa | Phase 2 — marca gráfica ainda pendente |
+| Direção visual com movimento e cor que chama atenção, fora do visual genérico de IA | Pedido explícito | Phase 2–3 |
+| Ofício das referências, sem clonar marca | Eduardo passou Apple (MacBook Pro, iPhone), Disney+, Netflix, Linear, Raycast, Lusion, Active Theory. Técnica sim. Identidade não. Brutalismo/azul de dashboard da busca automática foi descartado. | Phase 2–3 |
+| Uma cena WebGL, scroll GSAP no resto | Lusion e Active Theory pedem imersão. Entregar estúdio 3D inteiro estoura o v1. Cena assinatura + capítulos presos. | Phase 3 |
+| CTA WhatsApp +55 62 99828-6169 | Número já publicado na landing do Laço; confirmado na síntese | Phase 1: `WA_HIRE_HREF` constante |
+| Frutmix citada sem codebase local | Eduardo: não está aqui, pode citar; mesmo escopo industrial do Alfa | Phase 1: teto Alfa honrado |
+| Texto em português | Brief e produtos são em português, público no Brasil | Phase 1: UI PT-only |
+| Oferta de site no hero, mais forte que a lista de sistemas | Eduardo: fazemos o sistema e o site do negócio, e isso chama mais atenção. Não é quinto produto. | Phase 1: hero offer locked |
 
 ## Evolution
 
@@ -119,4 +121,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-09-23 after phase 1 context*
+*Last updated: 2026-09-23 after Phase 1*
