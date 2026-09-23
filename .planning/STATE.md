@@ -98,5 +98,5 @@ Items acknowledged and deferred at milestone close, most recent first:
 ## Session Continuity
 
 Last session: 2026-09-23T05:02:00.000Z
-Stopped at: Phase 2 CONTEXT captured (--auto); ready to plan
+Stopped at: Phase 2 RESEARCH complete; craft prototype (WebGL/GSAP/Lenis) already in working tree — plan next
 Resume file: None
