@@ -487,22 +487,25 @@ const WA =
 
 **If wrong on A1:** Document fallback: scaffold in `/tmp/winner-tech-app` then move `app/`, config, and `package.json` into repo without deleting `.planning`.
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **create-next-app vs non-empty root**
    - What we know: Official docs show `npx create-next-app@latest my-app --yes` `[CITED: nextjs.org/docs/app/getting-started/installation]`.
    - What's unclear: Exact CLI refusal rules when `.planning` exists.
    - Recommendation: Plan Wave 0 task tries `. --yes` first; fallback temp-dir copy if it aborts.
+   - **RESOLVED:** Plan 01-01 Task 1 uses temp-dir scaffold fallback when CLI refuses non-empty root (move app configs + package.json/lockfile only; preserve `.planning`).
 
 2. **Metadata description final string**
    - What we know: Title must be Winner Tech (BRND-01/02); OG image is Phase 2 (BASE-03).
    - What's unclear: Exact meta description sentence.
    - Recommendation: Planner picks one short pt-BR sentence mentioning sistemas + contratar; not blocking.
+   - **RESOLVED:** Plan 01-01 Task 1 sets a short pt-BR `metadata.description` mentioning sistemas e contratar (exact sentence is Claude discretion; title remains Winner Tech).
 
 3. **Laço niche line length**
    - What we know: PROD-05 requires white-label function pieces; full vertical list is CASE-04 (Phase 2).
    - What's unclear: Whether Phase 1 niche line should list all verticals briefly.
    - Recommendation: Short niche ("Postos e varejo") in Phase 1; expand in Phase 2.
+   - **RESOLVED:** Plan 01-01 uses short Laço niche **postos e varejo** in Phase 1; full vertical list deferred to Phase 2 CASE-04.
 
 ## Environment Availability
 

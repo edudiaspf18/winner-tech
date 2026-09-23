@@ -22,7 +22,7 @@ Greenfield institutional site: visitor recognizes Winner Tech, understands four 
 ## Phase Details
 
 ### Phase 1: Product truth + hire path
-**Goal:** Visitor understands who Winner Tech is, what each of the four systems does and for whom, and can start a hire conversation on WhatsApp — all in Portuguese.
+**Goal:** As a contratante, I want to see Winner Tech, the four systems with função/nicho, and open WhatsApp to hire, so that I understand the offer and start a conversation — all in Portuguese.
 **Mode:** mvp
 **Depends on**: Nothing (first phase)
 **Requirements**: BRND-01, BRND-02, BRND-04, PROD-01, PROD-02, PROD-03, PROD-04, PROD-05, CTA-01, BASE-01
@@ -32,7 +32,9 @@ Greenfield institutional site: visitor recognizes Winner Tech, understands four 
   3. Visitor sees Zelo, Alfa, Frutmix, and Laço, each with função and nicho (Frutmix stays within industrial scope only — no invented modules)
   4. Visitor opens WhatsApp +55 62 99828-6169 from an in-flow control on the page
   5. Every interface string on the page is in Portuguese
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 01-01-PLAN.md — Next.js scaffold + Portuguese content shell + two shared wa.me hire CTAs
 **UI hint**: yes
 
 ### Phase 2: Visual proof + layout quality
@@ -72,7 +74,7 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Product truth + hire path | 0/TBD | Not started | - |
+| 1. Product truth + hire path | 0/1 | Not started | - |
 | 2. Visual proof + layout quality | 0/TBD | Not started | - |
 | 3. Motion craft + CTA continuity | 0/TBD | Not started | - |
 
