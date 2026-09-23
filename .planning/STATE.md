@@ -4,12 +4,12 @@ milestone: v1.0
 milestone_name: MVP
 current_phase: 1
 current_phase_name: Product truth + hire path
-status: executing
+status: ready_for_verification
 stopped_at: Completed 01-01-PLAN.md
-last_updated: "2026-09-23T04:27:12.295Z"
+last_updated: "2026-09-23T04:27:30.000Z"
 last_activity: 2026-09-23
-last_activity_desc: Roadmap created (v1.0 MVP, 3 coarse phases, 26/26 requirements mapped)
-state_head: e5598e3bfe4de75bb180c74b75efe3aeafbbf6d3
+last_activity_desc: Completed 01-01-PLAN.md — Portuguese hire page walking skeleton
+state_head: 5eab7f4
 progress:
   total_phases: 3
   completed_phases: 0

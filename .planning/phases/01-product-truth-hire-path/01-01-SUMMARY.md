@@ -139,7 +139,7 @@ Each task was committed atomically:
 2. **Task 2: Content honesty gates — product facts, Frutmix ceiling, Portuguese chrome** - verify-only (no delta; honesty script + English-chrome grep already green on `22f4283`)
 3. **Task 3: Build + brand/title/CTA acceptance greps** - verify-only (no delta; `npm run build` + title/CTA/COVERAGE greps passed on `22f4283`)
 
-**Plan metadata:** (pending docs commit)
+**Plan metadata:** `e5598e3` (docs: SUMMARY), `5eab7f4` (docs: STATE/ROADMAP/REQUIREMENTS)
 
 _Note: Tasks 2–3 produced no file changes after Task 1; empty commits omitted per protocol._
 
