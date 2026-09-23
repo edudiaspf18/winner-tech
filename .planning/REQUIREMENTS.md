@@ -7,18 +7,18 @@
 
 ### Marca
 
-- [ ] **BRND-01**: Visitante vê o nome Winner Tech como marca pública da página
-- [ ] **BRND-02**: Visitante não vê "Winner Tecnologia da Informação" como título
+- [x] **BRND-01**: Visitante vê o nome Winner Tech como marca pública da página
+- [x] **BRND-02**: Visitante não vê "Winner Tecnologia da Informação" como título
 - [ ] **BRND-03**: Visitante vê a marca gráfica W branca sem fundo azul obrigatório na página
-- [ ] **BRND-04**: Visitante lê no hero que a Winner Tech faz sistemas e pode ser contratada
+- [x] **BRND-04**: Visitante lê no hero que a Winner Tech faz sistemas e pode ser contratada
 
 ### Portfólio
 
-- [ ] **PROD-01**: Visitante vê os quatro sistemas: Zelo, Alfa, Frutmix e Laço
-- [ ] **PROD-02**: Visitante lê a função do Zelo e os nichos estética automotiva, lava-jato e oficina, incluindo placa, vaga, PIX, WhatsApp, computador e celular
-- [ ] **PROD-03**: Visitante lê o Alfa como sistema industrial completo: cadastro, produção, nota fiscal e relatórios
-- [ ] **PROD-04**: Visitante lê a Frutmix no mesmo escopo industrial do Alfa, sem módulo, tela ou case inventado
-- [ ] **PROD-05**: Visitante lê o Laço como fidelidade white-label: app do cliente, app da equipe, painel e marca do negócio
+- [x] **PROD-01**: Visitante vê os quatro sistemas: Zelo, Alfa, Frutmix e Laço
+- [x] **PROD-02**: Visitante lê a função do Zelo e os nichos estética automotiva, lava-jato e oficina, incluindo placa, vaga, PIX, WhatsApp, computador e celular
+- [x] **PROD-03**: Visitante lê o Alfa como sistema industrial completo: cadastro, produção, nota fiscal e relatórios
+- [x] **PROD-04**: Visitante lê a Frutmix no mesmo escopo industrial do Alfa, sem módulo, tela ou case inventado
+- [x] **PROD-05**: Visitante lê o Laço como fidelidade white-label: app do cliente, app da equipe, painel e marca do negócio
 
 ### Prova
 
@@ -31,7 +31,7 @@
 
 ### Contato
 
-- [ ] **CTA-01**: Visitante abre WhatsApp +55 62 99828-6169 por um controle no fluxo da página
+- [x] **CTA-01**: Visitante abre WhatsApp +55 62 99828-6169 por um controle no fluxo da página
 - [ ] **CTA-02**: Visitante abre o mesmo WhatsApp por um controle flutuante que permanece alcançável
 - [ ] **CTA-03**: Mensagem do WhatsApp já vem preenchida com o sistema que o visitante estava vendo
 
@@ -43,7 +43,7 @@
 
 ### Base
 
-- [ ] **BASE-01**: Todo texto de interface está em português
+- [x] **BASE-01**: Todo texto de interface está em português
 - [ ] **BASE-02**: Visitante usa a página no celular e no desktop sem scroll horizontal
 - [ ] **BASE-03**: Link compartilhado mostra título, descrição e imagem Open Graph
 - [ ] **BASE-04**: Visitante alcança cada controle pelo teclado, com foco visível e alternativa de texto nas imagens
@@ -105,34 +105,35 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BRND-01 | Phase 1 | Pending |
-| BRND-02 | Phase 1 | Pending |
+| BRND-01 | Phase 1 | Complete |
+| BRND-02 | Phase 1 | Complete |
 | BRND-03 | Phase 2 | Pending |
-| BRND-04 | Phase 1 | Pending |
-| PROD-01 | Phase 1 | Pending |
-| PROD-02 | Phase 1 | Pending |
-| PROD-03 | Phase 1 | Pending |
-| PROD-04 | Phase 1 | Pending |
-| PROD-05 | Phase 1 | Pending |
+| BRND-04 | Phase 1 | Complete |
+| PROD-01 | Phase 1 | Complete |
+| PROD-02 | Phase 1 | Complete |
+| PROD-03 | Phase 1 | Complete |
+| PROD-04 | Phase 1 | Complete |
+| PROD-05 | Phase 1 | Complete |
 | CASE-01 | Phase 2 | Pending |
 | CASE-02 | Phase 2 | Pending |
 | CASE-03 | Phase 2 | Pending |
 | CASE-04 | Phase 2 | Pending |
 | CASE-05 | Phase 2 | Pending |
 | CASE-06 | Phase 2 | Pending |
-| CTA-01 | Phase 1 | Pending |
+| CTA-01 | Phase 1 | Complete |
 | CTA-02 | Phase 3 | Pending |
 | CTA-03 | Phase 3 | Pending |
 | MOTN-01 | Phase 3 | Pending |
 | MOTN-02 | Phase 3 | Pending |
 | MOTN-03 | Phase 2 | Pending |
-| BASE-01 | Phase 1 | Pending |
+| BASE-01 | Phase 1 | Complete |
 | BASE-02 | Phase 2 | Pending |
 | BASE-03 | Phase 2 | Pending |
 | BASE-04 | Phase 2 | Pending |
 | BASE-05 | Phase 3 | Pending |
 
 **Coverage:**
+
 - v1 requirements: 26 total
 - Mapped to phases: 26
 - Unmapped: 0
