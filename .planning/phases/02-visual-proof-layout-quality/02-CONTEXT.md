@@ -15,7 +15,9 @@
 <domain>
 ## Phase Boundary
 
-Fase 2 veste a página da fase 1 com marca gráfica, cor específica, trilho dos quatro sistemas, cases reais (Alfa Papéis, Posto Marinheiro), imagens reais de Zelo e Laço, e base de layout/OG/a11y. Não muda a oferta do hero, a ordem dos produtos, nem o destino do WhatsApp. Scroll preso, WebGL, botão flutuante e prefill por produto ficam na fase 3.
+Fase 2 veste a página da fase 1 com marca gráfica, cor específica, trilho dos quatro sistemas, cases reais (Alfa Papéis, Posto Marinheiro), imagens reais de Zelo e Laço, e base de layout/OG/a11y. Não muda a oferta do hero, a ordem dos produtos, nem o destino do WhatsApp.
+
+**Nota de trabalho (2026-09-23):** após feedback do Eduardo (skeleton branco sem ofício), o working tree já puxou antecipado: WebGL de assinatura, Lenis, GSAP (trilho pin + capítulos), CTA flutuante, paleta ink+ácido. O plano da fase 2 deve **absorver e endurecer** esse craft (prova real Zelo/Laço, cases, OG, a11y, W exportado) em vez de recomeçar do brochure estático. Prefill por produto e analytics de origem continuam fase 3.
 
 </domain>
 
