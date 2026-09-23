@@ -84,7 +84,7 @@ export function Hero() {
             data-hero-anim
             className="mt-10 max-w-md text-xs uppercase tracking-[0.22em] text-[var(--ink-muted)]"
           >
-            Sites tecnológicos · sistemas de operação · landing pages
+            Sites tecnológicos · landing pages · sites institucionais
           </p>
         </div>
         <div className="pointer-events-none hidden min-h-[22rem] lg:block" aria-hidden />

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { CASES, LACO_VERTICALS } from "@/lib/content";
+import { LumeUiMock, ZeloUiMock } from "@/components/product-ui-mocks";
 import { Reveal } from "@/components/reveal";
 
 export function CaseBlocks() {
@@ -84,7 +85,7 @@ export function CaseBlocks() {
 export function ProofPanels() {
   return (
     <section
-      id="prova"
+      id="interface"
       className="border-t border-[var(--line)] px-5 py-20 sm:px-8 sm:py-28"
       aria-label="Prova visual"
     >
@@ -93,42 +94,46 @@ export function ProofPanels() {
           <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent)]">
             Interface
           </p>
-          <h2 className="font-display mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl">
-            Zelo e Laço com prova real. Frutmix sem tela inventada.
+          <h2 className="font-display mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-[var(--ink)] sm:text-4xl">
+            Zelo, Lume e Laço — telas reais das landings e da operação.
           </h2>
+          <p className="mt-4 max-w-2xl text-base text-[var(--ink-muted)]">
+            Chrome fiel às landings de produto. Frutmix e Alfa sem screenshot
+            inventado.
+          </p>
         </Reveal>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
           <Reveal>
-            <div className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
+            <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
               <div className="border-b border-[var(--line)] px-5 py-3 text-xs uppercase tracking-[0.2em] text-[var(--ink-muted)]">
                 Zelo · Tela Hoje
               </div>
-              <div className="space-y-3 p-5" aria-label="Chrome da Tela Hoje do Zelo">
-                {[
-                  { label: "Livre", tone: "var(--accent)" },
-                  { label: "Esperando PIX", tone: "var(--accent-hot)" },
-                  { label: "Em serviço", tone: "var(--accent-cool)" },
-                ].map((row) => (
-                  <div
-                    key={row.label}
-                    className="flex items-center justify-between rounded-xl border border-[var(--line)] bg-[var(--bg)] px-4 py-3"
-                  >
-                    <span className="text-sm text-[var(--ink)]">{row.label}</span>
-                    <span
-                      className="h-2.5 w-2.5 rounded-full"
-                      style={{ background: row.tone }}
-                      aria-hidden
-                    />
-                  </div>
-                ))}
-                <p className="pt-2 text-xs text-[var(--ink-muted)]">
-                  Placa · vaga · PIX · WhatsApp — chrome fiel à landing do Zelo.
-                </p>
+              <div className="p-4 sm:p-5">
+                <ZeloUiMock />
               </div>
-            </div>
+              <figcaption className="border-t border-[var(--line)] px-5 py-4 text-sm text-[var(--ink-muted)]">
+                Placa, vaga e status — mesmo palco da landing do Zelo.
+              </figcaption>
+            </figure>
           </Reveal>
 
+          <Reveal>
+            <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
+              <div className="border-b border-[var(--line)] px-5 py-3 text-xs uppercase tracking-[0.2em] text-[var(--ink-muted)]">
+                Lume · Agenda do salão
+              </div>
+              <div className="p-4 sm:p-5">
+                <LumeUiMock />
+              </div>
+              <figcaption className="border-t border-[var(--line)] px-5 py-4 text-sm text-[var(--ink-muted)]">
+                Agenda sem horário duplicado — mock da landing do Lume.
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
+
+        <div className="mt-8 grid gap-8 lg:grid-cols-2">
           <Reveal>
             <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
               <Image
@@ -143,22 +148,22 @@ export function ProofPanels() {
               </figcaption>
             </figure>
           </Reveal>
-        </div>
 
-        <Reveal className="mt-8">
-          <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] lg:max-w-xl">
-            <Image
-              src="/proof/laco-hand-phone.jpg"
-              alt="App do Laço no celular, fidelidade white-label"
-              width={900}
-              height={1200}
-              className="h-64 w-full object-cover"
-            />
-            <figcaption className="border-t border-[var(--line)] px-5 py-4 text-sm text-[var(--ink-muted)]">
-              Laço · app na mão do cliente
-            </figcaption>
-          </figure>
-        </Reveal>
+          <Reveal>
+            <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
+              <Image
+                src="/proof/laco-hand-phone.jpg"
+                alt="App do Laço no celular, fidelidade white-label"
+                width={900}
+                height={1200}
+                className="h-56 w-full object-cover sm:h-72"
+              />
+              <figcaption className="border-t border-[var(--line)] px-5 py-4 text-sm text-[var(--ink-muted)]">
+                Laço · app na mão do cliente
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

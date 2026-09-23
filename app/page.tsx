@@ -5,6 +5,7 @@ import { Hero } from "@/components/hero";
 import { MarqueeStrip } from "@/components/marquee-strip";
 import { PageShell } from "@/components/page-shell";
 import { ProductRail } from "@/components/product-rail";
+import { SitesOffer } from "@/components/sites-offer";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Hero />
       <MarqueeStrip />
       <ProductRail />
+      <SitesOffer />
       <CaseBlocks />
       <ProofPanels />
       <ApprovedProofSection />

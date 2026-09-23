@@ -62,6 +62,12 @@ export function SiteHeader({ homeAnchors = false }: SiteHeaderProps) {
           <a href={sistemasHref} className="transition hover:text-[var(--ink)]">
             Sistemas
           </a>
+          <a
+            href={homeAnchors ? "#sites" : "/#sites"}
+            className="transition hover:text-[var(--ink)]"
+          >
+            Sites
+          </a>
           <Link href="/sobre" className="transition hover:text-[var(--ink)]">
             Sobre
           </Link>

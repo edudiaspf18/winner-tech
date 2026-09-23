@@ -16,7 +16,7 @@ export function SiteFooter() {
         <div className="flex flex-wrap gap-x-10 gap-y-6 text-sm">
           <div>
             <p className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">
-              Por nicho
+              Landing pages
             </p>
             <ul className="mt-3 space-y-2 text-[var(--ink-muted)]">
               {NICHES.map((n) => (
@@ -29,6 +29,11 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a href="/#sites" className="transition hover:text-[var(--ink)]">
+                  Sites & landings
+                </a>
+              </li>
             </ul>
           </div>
           <div>

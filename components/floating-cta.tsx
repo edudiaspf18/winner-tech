@@ -26,7 +26,8 @@ export function FloatingCta() {
       aria-label={CTA_LABEL}
       data-origin={origin}
       onClick={() => trackHireClick(origin)}
-      className={`fixed bottom-5 right-5 z-50 inline-flex cursor-pointer items-center gap-2 rounded-2xl bg-[var(--cta-bg)] px-4 py-3 text-sm font-semibold text-[var(--cta-ink)] shadow-[0_8px_28px_rgba(0,0,0,0.35),0_0_0_1px_color-mix(in_oklab,var(--accent)_40%,transparent)] transition duration-300 sm:bottom-8 sm:right-8 ${
+      style={{ backgroundColor: "#eef1e4", color: "#10140c" }}
+      className={`fixed bottom-5 right-5 z-50 inline-flex cursor-pointer items-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold shadow-[0_8px_28px_rgba(0,0,0,0.35),0_0_0_1px_color-mix(in_oklab,#a8bd72_40%,transparent)] transition duration-300 hover:brightness-110 sm:bottom-8 sm:right-8 ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-4 opacity-0"
