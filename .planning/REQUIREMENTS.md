@@ -105,38 +105,38 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BRND-01 | — | Pending |
-| BRND-02 | — | Pending |
-| BRND-03 | — | Pending |
-| BRND-04 | — | Pending |
-| PROD-01 | — | Pending |
-| PROD-02 | — | Pending |
-| PROD-03 | — | Pending |
-| PROD-04 | — | Pending |
-| PROD-05 | — | Pending |
-| CASE-01 | — | Pending |
-| CASE-02 | — | Pending |
-| CASE-03 | — | Pending |
-| CASE-04 | — | Pending |
-| CASE-05 | — | Pending |
-| CASE-06 | — | Pending |
-| CTA-01 | — | Pending |
-| CTA-02 | — | Pending |
-| CTA-03 | — | Pending |
-| MOTN-01 | — | Pending |
-| MOTN-02 | — | Pending |
-| MOTN-03 | — | Pending |
-| BASE-01 | — | Pending |
-| BASE-02 | — | Pending |
-| BASE-03 | — | Pending |
-| BASE-04 | — | Pending |
-| BASE-05 | — | Pending |
+| BRND-01 | Phase 1 | Pending |
+| BRND-02 | Phase 1 | Pending |
+| BRND-03 | Phase 2 | Pending |
+| BRND-04 | Phase 1 | Pending |
+| PROD-01 | Phase 1 | Pending |
+| PROD-02 | Phase 1 | Pending |
+| PROD-03 | Phase 1 | Pending |
+| PROD-04 | Phase 1 | Pending |
+| PROD-05 | Phase 1 | Pending |
+| CASE-01 | Phase 2 | Pending |
+| CASE-02 | Phase 2 | Pending |
+| CASE-03 | Phase 2 | Pending |
+| CASE-04 | Phase 2 | Pending |
+| CASE-05 | Phase 2 | Pending |
+| CASE-06 | Phase 2 | Pending |
+| CTA-01 | Phase 1 | Pending |
+| CTA-02 | Phase 3 | Pending |
+| CTA-03 | Phase 3 | Pending |
+| MOTN-01 | Phase 3 | Pending |
+| MOTN-02 | Phase 3 | Pending |
+| MOTN-03 | Phase 2 | Pending |
+| BASE-01 | Phase 1 | Pending |
+| BASE-02 | Phase 2 | Pending |
+| BASE-03 | Phase 2 | Pending |
+| BASE-04 | Phase 2 | Pending |
+| BASE-05 | Phase 3 | Pending |
 
 **Coverage:**
 - v1 requirements: 26 total
-- Mapped to phases: 0
-- Unmapped: 26 ⚠️
+- Mapped to phases: 26
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-09-23*
-*Last updated: 2026-09-23 after scoping*
+*Last updated: 2026-09-23 after roadmap mapping*
