@@ -3,6 +3,7 @@ import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { ActiveProductProvider } from "@/components/active-product";
+import { Ga4 } from "@/components/ga4";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -49,6 +50,7 @@ export default function RootLayout({
         <ActiveProductProvider>
           <SmoothScroll>{children}</SmoothScroll>
         </ActiveProductProvider>
+        <Ga4 />
         <div className="site-grain" aria-hidden="true" />
       </body>
     </html>

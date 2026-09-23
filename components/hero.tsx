@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { CTA_LABEL, HERO, BRAND_NAME } from "@/lib/content";
-import { WA_HIRE_HREF, trackHireClick } from "@/lib/whatsapp";
+import { WA_HIRE_HREF } from "@/lib/whatsapp";
 import { HireCta } from "@/components/hire-cta";
 import { HeroScene } from "@/components/hero-scene";
 import { BrandMark } from "@/components/brand-mark";
@@ -71,12 +71,7 @@ export function Hero() {
           </p>
 
           <div data-hero-anim className="mt-8 flex flex-wrap items-center gap-4">
-            <HireCta
-              href={WA_HIRE_HREF}
-              label={CTA_LABEL}
-              origin="hero"
-              onNavigate={() => trackHireClick("hero")}
-            />
+            <HireCta href={WA_HIRE_HREF} label={CTA_LABEL} origin="hero" />
             <a
               href="#sistemas"
               className="text-sm font-medium text-[var(--ink-muted)] underline-offset-4 transition hover:text-[var(--ink)] hover:underline"

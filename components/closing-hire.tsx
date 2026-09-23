@@ -1,7 +1,7 @@
 "use client";
 
 import { CLOSING_LINE, CTA_LABEL } from "@/lib/content";
-import { buildWaHireHref, trackHireClick } from "@/lib/whatsapp";
+import { buildWaHireHref } from "@/lib/whatsapp";
 import { HireCta } from "@/components/hire-cta";
 import { Reveal } from "@/components/reveal";
 import { useActiveProduct } from "@/components/active-product";
@@ -40,12 +40,7 @@ export function ClosingHire() {
           {CLOSING_LINE}
         </h2>
         <div data-reveal-child className="mt-10 flex justify-center" style={{ opacity: 0 }}>
-          <HireCta
-            href={href}
-            label={CTA_LABEL}
-            origin={origin}
-            onNavigate={() => trackHireClick(origin)}
-          />
+          <HireCta href={href} label={CTA_LABEL} origin={origin} />
         </div>
       </Reveal>
     </section>

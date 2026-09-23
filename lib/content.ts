@@ -91,3 +91,68 @@ export const CASES: CaseStudy[] = [
       "O Laço entrega fidelidade white-label. Case: Posto Marinheiro.",
   },
 ];
+
+/** Short company copy for /sobre — no invented history. */
+export const ABOUT = {
+  eyebrow: "Sobre",
+  title: "Sistemas para quem opera.",
+  lead:
+    "A Winner Tech desenvolve e opera sistemas para negócios reais — loja automotiva, indústria, posto e varejo — e também faz o site do cliente.",
+  body: [
+    "Marca pública: Winner Tech. Os produtos Zelo, Alfa, Frutmix e Laço continuam nos próprios ambientes; este site apresenta e abre a conversa para contratar.",
+    "Sem painel self-service aqui. O caminho é WhatsApp: conversa direta com quem entrega o sistema.",
+  ],
+} as const;
+
+export type NichePath = {
+  slug: string;
+  title: string;
+  lead: string;
+  productNames: string[];
+};
+
+/** Niche discovery entry points (DISC-01). */
+export const NICHES: NichePath[] = [
+  {
+    slug: "loja-automotiva",
+    title: "Para loja automotiva",
+    lead: "Estética, lava-jato e oficina: operação do dia no computador e no celular.",
+    productNames: ["Zelo"],
+  },
+  {
+    slug: "industria",
+    title: "Para indústria",
+    lead: "Cadastro, produção, nota fiscal e relatórios no chão industrial.",
+    productNames: ["Alfa", "Frutmix"],
+  },
+  {
+    slug: "fidelidade",
+    title: "Para fidelidade",
+    lead: "White-label com app do cliente, app da equipe, painel e marca do negócio.",
+    productNames: ["Laço"],
+  },
+];
+
+export function nicheBySlug(slug: string) {
+  return NICHES.find((n) => n.slug === slug) ?? null;
+}
+
+/**
+ * CASE-07 — only entries with approved: true render.
+ * Leave empty until Eduardo delivers quote/metric text.
+ */
+export type ApprovedProof =
+  | {
+      kind: "quote";
+      quote: string;
+      attribution: string;
+      approved: true;
+    }
+  | {
+      kind: "metric";
+      value: string;
+      label: string;
+      approved: true;
+    };
+
+export const APPROVED_PROOF: ApprovedProof[] = [];

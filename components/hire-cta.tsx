@@ -1,3 +1,7 @@
+"use client";
+
+import { trackHireClick } from "@/lib/whatsapp";
+
 type HireCtaProps = {
   href: string;
   label: string;
@@ -31,6 +35,7 @@ export function HireCta({
       data-origin={origin}
       className={`${base} ${styles} ${className}`}
       onClick={() => {
+        trackHireClick(origin);
         onNavigate?.();
       }}
     >
