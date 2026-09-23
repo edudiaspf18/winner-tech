@@ -1,10 +1,9 @@
 ---
 phase: 01-product-truth-hire-path
-verified: 2026-09-23T04:29:56.082Z
+verified: 2026-09-23T05:42:00.000Z
 status: passed
 score: 12/12 must-haves verified
 covered_files:
-
   - .planning/phases/01-product-truth-hire-path/01-01-PLAN.md
   - .planning/phases/01-product-truth-hire-path/01-01-SUMMARY.md
   - .planning/phases/01-product-truth-hire-path/01-CONTEXT.md
@@ -18,11 +17,9 @@ covered_files:
   - components/hero.tsx
   - components/closing-hire.tsx
   - components/hire-cta.tsx
-  - components/product-block.tsx
   - components/site-header.tsx
   - package.json
-
-covered_digest: "v1:sha256:04ced3df350aaf84943753ca2bee2206c82fcf37013f1a39422da7245db6fdee"
+covered_digest: "v1:sha256:b0089e418658775377537ea69186ebe376d8f0e25558a5f0d250b6b863f67408"
 behavior_unverified: 0
 overrides_applied: 0
 decision_coverage:
