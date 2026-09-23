@@ -62,6 +62,15 @@ Logo entregue nesta conversa: W geométrico branco e wordmark WINNERTECH sobre a
 
 WhatsApp de contato já usado na landing do Laço: `https://wa.me/5562998286169`. Eduardo confirmou esse CTA ao aprovar a síntese do projeto.
 
+Referências de ofício dadas em 2026-09-23. O site entrega a técnica. Não clona a marca.
+
+- [MacBook Pro](https://www.apple.com/macbook-pro/) e [iPhone 18 Pro](https://www.apple.com/iphone-18-pro/): nav local fixa, headline curto, produto como objeto, capítulo preso no scroll (um recurso, uma imagem grande), faixa "highlights", bloco denso de spec no fim.
+- [Disney+](https://www.disneyplus.com/pt-br/home) e [Netflix](https://www.netflix.com/browse): campo escuro cinematográfico, billboard, trilho horizontal de peças. No nosso site o trilho são os quatro sistemas, não pôster de filme.
+- [Linear](https://linear.app/) e [Raycast](https://www.raycast.com/): a interface real do produto dentro da página, tipo apertado, movimento quieto, grid de capacidade. Zelo e Laço entram com tela real. Frutmix não ganha tela inventada.
+- [Lusion](https://lusion.co/) e [Active Theory](https://activetheory.net/): scroll para explorar, capítulo em viewport cheia, uma cena de canvas/WebGL como atmosfera. v1 não vira estúdio 3D inteiro. Uma cena assinatura mais capítulos GSAP.
+
+Stack de pesquisa (Next.js, GSAP ScrollTrigger, Lenis) cobre Apple, Linear e Raycast. WebGL entra só na cena assinatura, não como motor de todo o scroll.
+
 Público do site: quem pode contratar a Winner Tech, não o usuário final de cada sistema (o cliente do lava-jato, o frentista, o operador de chão de fábrica).
 
 ## Constraints
@@ -70,7 +79,8 @@ Público do site: quem pode contratar a Winner Tech, não o usuário final de ca
 - **Produtos**: quatro sistemas nomeados; função e nicho obrigatórios em cada um
 - **Fonte da verdade**: código e landings locais de Zelo e Laço; fala do Eduardo para Alfa e Frutmix; não inventar feature que não esteja numa dessas fontes
 - **Código ausente**: Laço não entra neste git; Frutmix não está no disco; Alfa ao vivo é o site da Alfa Papéis
-- **Visual**: movimento e cor forte; proibido o visual padrão de template de IA (gradiente roxo, cards iguais, hero centralizado sem ideia)
+- **Visual**: movimento e cor forte; proibido o visual padrão de template de IA (gradiente roxo, cards iguais, hero centralizado sem ideia, brutalismo cru, monocromático com acento azul de dashboard)
+- **Ofício visual**: técnicas das referências abaixo. Identidade, layout, logo, copy e paleta dessas marcas ficam de fora.
 - **Idioma**: português
 - **Stack**: ainda não escolhida. Repo sem `package.json`. Pesquisa de stack vem depois deste documento.
 - **Contato**: um canal, WhatsApp +55 62 99828-6169
@@ -83,7 +93,9 @@ Público do site: quem pode contratar a Winner Tech, não o usuário final de ca
 | Quatro produtos na vitrine: Zelo, Alfa, Frutmix, Laço | Pedido explícito; cada um com nicho | — Pending |
 | Site institucional para ser contratada, não os sistemas em si | Objetivo "para sermos contratados" | — Pending |
 | Logo W branca; fundo azul do arquivo não é o fundo do site | Eduardo: logo é boa; azul de fundo não precisa | — Pending |
-| Direção visual com movimento e cor que chama atenção, fora do visual genérico de IA | Pedido explícito; referências de ofício Apple, Samsung, Disney, Netflix | — Pending |
+| Direção visual com movimento e cor que chama atenção, fora do visual genérico de IA | Pedido explícito | — Pending |
+| Ofício das referências, sem clonar marca | Eduardo passou Apple (MacBook Pro, iPhone), Disney+, Netflix, Linear, Raycast, Lusion, Active Theory. Técnica sim. Identidade não. Brutalismo/azul de dashboard da busca automática foi descartado. | — Pending |
+| Uma cena WebGL, scroll GSAP no resto | Lusion e Active Theory pedem imersão. Entregar estúdio 3D inteiro estoura o v1. Cena assinatura + capítulos presos. | — Pending |
 | CTA WhatsApp +55 62 99828-6169 | Número já publicado na landing do Laço; confirmado na síntese | — Pending |
 | Frutmix citada sem codebase local | Eduardo: não está aqui, pode citar; mesmo escopo industrial do Alfa | — Pending |
 | Texto em português | Brief e produtos são em português, público no Brasil | — Pending |
@@ -106,4 +118,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-09-23 after initialization*
+*Last updated: 2026-09-23 after craft references*
