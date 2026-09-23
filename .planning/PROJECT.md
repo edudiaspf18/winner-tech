@@ -17,6 +17,15 @@ Um visitante entende, em uma passagem, o que a Winner Tech faz, para quem cada s
 - **Success metric**: conversa iniciada (WhatsApp) a partir do site
 - **Strategy notes**: vitrine de portfólio. Os produtos continuam nos repositórios e deploys próprios; este site não os substitui.
 
+## Current Milestone: v2.0 Discovery & Trust
+
+**Goal:** Visitante encontra caminho por nicho, conhece a empresa no Sobre, só vê prova citada quando aprovada, e cliques de contratar viram eventos reais de analytics.
+
+**Target features:**
+- Discovery por nicho (loja automotiva, indústria, fidelidade) + página Sobre
+- Depoimentos/métricas só com conteúdo aprovado (CASE-07); vazio = seção omitida
+- Analytics real (GA4 via env) no lugar do stub dataLayer
+
 ## Requirements
 
 ### Validated
@@ -40,9 +49,9 @@ Um visitante entende, em uma passagem, o que a Winner Tech faz, para quem cada s
 
 ### Active
 
-- [ ] Páginas de discovery / Sobre (v2)
-- [ ] Depoimentos ou métricas só com dado aprovado pelo Eduardo (CASE-07)
-- [ ] Analytics real no lugar do stub dataLayer
+- [ ] DISC-01 / DISC-02 — discovery por nicho + Sobre
+- [ ] CASE-07 — depoimento/métrica só com dado aprovado
+- [ ] ANAL-01 / ANAL-02 — GA4 real + hire click events
 
 ### Out of Scope
 
@@ -53,10 +62,14 @@ Um visitante entende, em uma passagem, o que a Winner Tech faz, para quem cada s
 - Login, painel, checkout ou área do cliente neste site
 - Copiar identidade visual da Apple, Samsung, Disney ou Netflix
 - Estúdio 3D completo estilo Lusion — v1 ficou em cena sutil + GSAP/Lenis
+- Inventar depoimento, métrica ou quote sem aprovação do Eduardo
+- Blog, vagas, i18n (CONT-*) — fora deste milestone
 
 ## Context
 
 Shipped **v1.0 MVP** (2026-09-23): Next.js 16 + Tailwind 4 + GSAP/Lenis + WebGL sutil.
+
+Active **v2.0 Discovery & Trust**: nicho paths, Sobre, prova aprovada, analytics GA4.
 
 - **Zelo** / **Laço**: landings locais para voz e prova
 - **Alfa**: case Alfa Papéis (https://alfapapeis.ind.br/)
@@ -91,5 +104,18 @@ Shipped **v1.0 MVP** (2026-09-23): Next.js 16 + Tailwind 4 + GSAP/Lenis + WebGL 
 
 This document evolves at phase transitions and milestone boundaries.
 
+**After each phase transition** (via `/gsd-transition`):
+1. Requirements invalidated? → Move to Out of Scope with reason
+2. Requirements validated? → Move to Validated with phase reference
+3. New requirements emerged? → Add to Active
+4. Decisions to log? → Add to Key Decisions
+5. "What This Is" still accurate? → Update if drifted
+
+**After each milestone** (via `/gsd:complete-milestone`):
+1. Full review of all sections
+2. Core Value check — still the right priority?
+3. Audit Out of Scope — reasons still valid?
+4. Update Context with current state
+
 ---
-*Last updated: 2026-09-23 after v1.0 milestone*
+*Last updated: 2026-09-23 after starting v2.0 Discovery & Trust*

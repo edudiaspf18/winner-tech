@@ -1,19 +1,16 @@
 ---
 gsd_state_version: "1.0"
-milestone: v1.0
-milestone_name: MVP
-status: Awaiting next milestone
-stopped_at: Phase 03 complete — all phases complete
-last_updated: "2026-09-23T05:41:55.422Z"
+milestone: v2.0
+milestone_name: Discovery & Trust
+status: planning
+last_updated: "2026-09-23T05:46:27.676Z"
 last_activity: 2026-09-23
-last_activity_desc: Milestone v1.0 completed and archived
-state_head: e794f1eec5ffec1a4a89fdbb5fcfeaf4ebeddf0b
 progress:
   total_phases: 3
-  completed_phases: 3
-  total_plans: 3
-  completed_plans: 3
-current_phase: 03
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -23,14 +20,14 @@ current_phase: 03
 See: .planning/PROJECT.md (updated 2026-09-23)
 
 **Core value:** Um visitante entende, em uma passagem, o que a Winner Tech faz, para quem cada sistema serve, e como pedir uma conversa para contratar.
-**Current focus:** Planning next milestone (v2.0)
+**Current focus:** Phase 4 — Discovery paths + Sobre
 
 ## Current Position
 
-Phase: Milestone v1.0 complete
+Phase: Not started (defining requirements)
 Plan: —
-Status: Awaiting next milestone
-Last activity: 2026-09-23 — Milestone v1.0 completed and archived
+Status: Defining requirements
+Last activity: 2026-09-23 — Milestone v2.0 started
 
 ## Performance Metrics
 
