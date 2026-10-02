@@ -97,6 +97,12 @@ public/brand/              marca gráfica
 
 O clique em "Quero contratar" dispara o evento `hire_whatsapp_click` com o parâmetro `origin` (seção ou nicho de onde veio). O evento vai para `window.dataLayer` e, se o GA4 estiver configurado, para o `gtag`. Com o Meta Pixel configurado, o mesmo clique dispara o evento padrão `Contact`. O clique é capturado no código (`lib/whatsapp.ts`), sem depender de GTM.
 
+## Segurança e qualidade
+
+- Headers de segurança em `next.config.ts` (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, HSTS). O HSTS só vale sob HTTPS. Sem CSP por enquanto, por causa do GA4.
+- Dados estruturados (JSON-LD, `Organization` e `WebSite`) no layout, gerados em `lib/site.ts`.
+- CI em `.github/workflows/ci.yml`: `npm run typecheck`, `npm run lint` e `npm run build` a cada push e pull request.
+
 ## Privacidade e cookies (LGPD)
 
 - GA4 e Meta Pixel só carregam depois do aceite no banner de cookies (`components/cookie-banner.tsx`, `components/analytics.tsx`). A escolha fica no `localStorage`.

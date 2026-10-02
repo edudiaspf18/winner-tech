@@ -5,7 +5,12 @@ import { SmoothScroll } from "@/components/smooth-scroll";
 import { ActiveProductProvider } from "@/components/active-product";
 import { Analytics } from "@/components/analytics";
 import { CookieBanner } from "@/components/cookie-banner";
-import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
+import {
+  SITE_DESCRIPTION,
+  SITE_TITLE,
+  SITE_URL,
+  buildJsonLd,
+} from "@/lib/site";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -59,6 +64,13 @@ export default function RootLayout({
         <ActiveProductProvider>
           <SmoothScroll>{children}</SmoothScroll>
         </ActiveProductProvider>
+        <script
+          type="application/ld+json"
+          // "<" escaped so the JSON can never close the script tag
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildJsonLd()).replace(/</g, "\\u003c"),
+          }}
+        />
         <Analytics />
         <CookieBanner />
         <div className="site-grain" aria-hidden="true" />
