@@ -9,7 +9,6 @@ O site é uma vitrine. Os produtos continuam nos próprios repositórios e ambie
 <table>
   <tr>
     <td width="50%"><img src="docs/screenshot-sistemas.jpg" alt="Seção de sistemas: Zelo, Alfa, Lume e Laço" /></td>
-    <td width="50%"><img src="docs/screenshot-sites.jpg" alt="Seção de sites e landing pages" /></td>
   </tr>
 </table>
 
