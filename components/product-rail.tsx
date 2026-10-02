@@ -82,7 +82,7 @@ function RailCard({
           aria-hidden
         >
           <span
-            className="block h-full w-1/2 rounded-full transition duration-500 group-hover:w-full"
+            className="block h-full w-full [clip-path:inset(0_50%_0_0_round_9999px)] transition-[clip-path] duration-[1200ms] ease-[cubic-bezier(0.45,0,0.25,1)] group-hover:[clip-path:inset(0_0_0_0_round_9999px)] group-focus-visible:[clip-path:inset(0_0_0_0_round_9999px)] motion-reduce:transition-none"
             style={{ background: accent }}
           />
         </div>
