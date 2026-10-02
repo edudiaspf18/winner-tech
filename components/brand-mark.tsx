@@ -2,7 +2,11 @@ type BrandMarkProps = {
   className?: string;
 };
 
-/** Geometric W — white mark, no blue field. */
+/**
+ * Winner Tech monogram — W only.
+ * Dual-chevron construction from the original blue-field logo,
+ * stripped to a pure mark (currentColor, any surface).
+ */
 export function BrandMark({ className = "h-8 w-8" }: BrandMarkProps) {
   return (
     <svg
@@ -12,9 +16,21 @@ export function BrandMark({ className = "h-8 w-8" }: BrandMarkProps) {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
+      {/* Left chevron */}
       <path
-        d="M6 12 L18 52 L32 28 L46 52 L58 12 L48 12 L40 36 L32 20 L24 36 L16 12 Z"
-        fill="currentColor"
+        d="M8 14 L24 52 L33.5 28"
+        stroke="currentColor"
+        strokeWidth="8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Right chevron — slight overlap at the center peak */}
+      <path
+        d="M30.5 28 L40 52 L56 14"
+        stroke="currentColor"
+        strokeWidth="8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

@@ -5,20 +5,20 @@ export function ZeloUiMock() {
       className="overflow-hidden rounded-xl border border-white/12 bg-[#0a0a0a] text-[#f5f5f7]"
       aria-label="Interface Zelo — Tela Hoje"
     >
-      <div className="flex items-center gap-2 border-b border-white/10 bg-[#111] px-3 py-2">
+      <div className="flex items-center gap-2 border-b border-white/10 bg-[#111] px-2.5 py-2 sm:px-3">
         <span className="flex gap-1.5" aria-hidden>
-          <i className="block h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
-          <i className="block h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
-          <i className="block h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+          <i className="block h-2 w-2 rounded-full bg-[#ff5f57] sm:h-2.5 sm:w-2.5" />
+          <i className="block h-2 w-2 rounded-full bg-[#febc2e] sm:h-2.5 sm:w-2.5" />
+          <i className="block h-2 w-2 rounded-full bg-[#28c840] sm:h-2.5 sm:w-2.5" />
         </span>
-        <div className="ml-2 flex items-center gap-2 text-[11px] font-medium tracking-wide text-white/70">
+        <div className="ml-1 flex items-center gap-2 text-[10px] font-medium tracking-wide text-white/70 sm:ml-2 sm:text-[11px]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/proof/zelo-icon.png" alt="" width={14} height={14} className="h-3.5 w-3.5" />
+          <img src="/proof/zelo-icon.png" alt="" width={14} height={14} className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
           Zelo · Hoje
         </div>
       </div>
-      <div className="grid grid-cols-[4.5rem_1fr] sm:grid-cols-[5.5rem_1fr]">
-        <aside className="space-y-1 border-r border-white/10 bg-[#0d0d0d] px-2 py-3 text-[10px] text-white/45">
+      <div className="grid grid-cols-1 sm:grid-cols-[5.5rem_1fr]">
+        <aside className="hidden space-y-1 border-r border-white/10 bg-[#0d0d0d] px-2 py-3 text-[10px] text-white/45 sm:block">
           <p className="mb-2 flex items-center gap-1.5 font-semibold text-white/80">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/proof/zelo-icon.png" alt="" width={12} height={12} />
@@ -33,7 +33,7 @@ export function ZeloUiMock() {
             </span>
           ))}
         </aside>
-        <div className="space-y-2.5 p-3">
+        <div className="space-y-2.5 p-3 sm:p-3">
           <div className="flex items-end justify-between gap-2">
             <div>
               <p className="text-[10px] uppercase tracking-[0.16em] text-white/40">

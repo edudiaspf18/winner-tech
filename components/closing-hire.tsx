@@ -14,7 +14,7 @@ export function ClosingHire() {
   return (
     <section
       id="contratar"
-      className="relative overflow-hidden border-t border-[var(--line)] px-5 py-28 sm:px-8 sm:py-36"
+      className="relative overflow-hidden border-t border-[var(--line)] px-4 py-16 sm:px-6 sm:py-28 lg:px-8 lg:py-36"
     >
       <div
         aria-hidden
@@ -39,8 +39,17 @@ export function ClosingHire() {
         >
           {CLOSING_LINE}
         </h2>
-        <div data-reveal-child className="mt-10 flex justify-center" style={{ opacity: 0 }}>
-          <HireCta href={href} label={CTA_LABEL} origin={origin} />
+        <div
+          data-reveal-child
+          className="mt-8 flex justify-center sm:mt-10"
+          style={{ opacity: 0 }}
+        >
+          <HireCta
+            href={href}
+            label={CTA_LABEL}
+            origin={origin}
+            className="w-full max-w-sm sm:w-auto"
+          />
         </div>
       </Reveal>
     </section>

@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ITEMS = [
   "Zelo",
   "Alfa",
-  "Frutmix",
+  "Lume",
   "Laço",
   "Sites do negócio",
   "Landing pages",
@@ -54,18 +54,18 @@ export function MarqueeStrip() {
   return (
     <div
       ref={root}
-      className="overflow-hidden border-y border-[var(--line)] bg-[var(--bg-elevated)] py-4"
+      className="overflow-hidden border-y border-[var(--line)] bg-[var(--bg-elevated)] py-3 sm:py-4"
       style={{ opacity: 0 }}
       aria-hidden="true"
     >
-      <div className="anim-marquee flex w-max gap-10 whitespace-nowrap px-4">
+      <div className="anim-marquee flex w-max gap-6 whitespace-nowrap px-3 sm:gap-10 sm:px-4">
         {row.map((item, i) => (
           <span
             key={`${item}-${i}`}
-            className="font-display text-sm font-semibold uppercase tracking-[0.32em] text-[var(--ink-muted)]"
+            className="font-display text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-[var(--ink-muted)] sm:text-sm sm:tracking-[0.32em]"
           >
             {item}
-            <span className="ml-10 text-[var(--accent)]">◆</span>
+            <span className="ml-6 text-[var(--accent)] sm:ml-10">◆</span>
           </span>
         ))}
       </div>

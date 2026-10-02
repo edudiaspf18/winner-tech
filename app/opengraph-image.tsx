@@ -44,7 +44,7 @@ export default function OpenGraphImage() {
             Fazemos o sistema e o site do seu negócio.
           </div>
           <div style={{ fontSize: 26, color: "#b4bcd0" }}>
-            Zelo · Alfa · Frutmix · Laço
+            Zelo · Alfa · Lume · Laço
           </div>
         </div>
       </div>

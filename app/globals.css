@@ -18,7 +18,25 @@
   --font-display: var(--font-syne), "Syne", ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-dm), "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --header-h: 4.5rem;
+  --header-h: 3.75rem;
+  --page-px: 1rem;
+  --section-py: 3rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-h: 4.25rem;
+    --page-px: 1.5rem;
+    --section-py: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 4.5rem;
+    --page-px: 2rem;
+    --section-py: 7rem;
+  }
 }
 
 @theme inline {
@@ -58,11 +76,21 @@ html.lenis body {
 body {
   margin: 0;
   min-height: 100%;
+  min-height: 100dvh;
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
 }
 
 ::selection {
@@ -119,6 +147,16 @@ a {
   }
 }
 
+@keyframes float-y-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 @keyframes pulse-ring {
   0% {
     transform: scale(0.92);
@@ -146,16 +184,28 @@ a {
   animation: float-y 5.5s var(--ease-out) infinite;
 }
 
+.rail-card-float {
+  animation: float-y-soft 4.2s ease-in-out infinite;
+  will-change: transform;
+}
+
 .anim-pulse-ring {
   animation: pulse-ring 2.4s ease-out infinite;
 }
 
 .anim-marquee {
-  animation: marquee 28s linear infinite;
+  animation: marquee 22s linear infinite;
+}
+
+@media (min-width: 640px) {
+  .anim-marquee {
+    animation-duration: 28s;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .anim-float,
+  .rail-card-float,
   .anim-pulse-ring,
   .anim-marquee {
     animation: none !important;

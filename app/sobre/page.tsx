@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <PageShell>
-      <section className="relative overflow-hidden px-5 pb-24 pt-[calc(var(--header-h)+3rem)] sm:px-8 sm:pb-32">
+      <section className="relative overflow-hidden px-4 pb-16 pt-[calc(var(--header-h)+env(safe-area-inset-top)+2rem)] sm:px-6 sm:pb-24 sm:pt-[calc(var(--header-h)+3rem)] lg:px-8 lg:pb-32">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-70"
@@ -32,7 +32,7 @@ export default function SobrePage() {
           </p>
           <h1
             data-reveal-child
-            className="font-display mt-5 text-[clamp(2.25rem,5vw,3.75rem)] font-semibold leading-[1.05] tracking-tight"
+            className="font-display mt-4 text-[clamp(1.85rem,7vw,3.75rem)] font-semibold leading-[1.05] tracking-tight sm:mt-5"
             style={{ opacity: 0 }}
           >
             {ABOUT.title}
@@ -54,8 +54,17 @@ export default function SobrePage() {
               {para}
             </p>
           ))}
-          <div data-reveal-child className="mt-12" style={{ opacity: 0 }}>
-            <HireCta href={WA_HIRE_HREF} label={CTA_LABEL} origin="sobre" />
+          <div
+            data-reveal-child
+            className="mt-10 flex w-full justify-center sm:mt-12"
+            style={{ opacity: 0 }}
+          >
+            <HireCta
+              href={WA_HIRE_HREF}
+              label={CTA_LABEL}
+              origin="sobre"
+              className="w-full max-w-sm sm:w-auto"
+            />
           </div>
         </Reveal>
       </section>

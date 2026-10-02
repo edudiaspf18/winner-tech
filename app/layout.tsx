@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
@@ -19,15 +19,22 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#07090f",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://winnertech.com.br"),
   title: "Winner Tech",
   description:
-    "Sistemas para quem opera. Conheça Zelo, Alfa, Frutmix e Laço e contrate a Winner Tech.",
+    "Sistemas para quem opera. Conheça Zelo, Alfa, Lume e Laço e contrate a Winner Tech.",
   openGraph: {
     title: "Winner Tech",
     description:
-      "Sistemas para quem opera. Conheça Zelo, Alfa, Frutmix e Laço e contrate a Winner Tech.",
+      "Sistemas para quem opera. Conheça Zelo, Alfa, Lume e Laço e contrate a Winner Tech.",
     locale: "pt_BR",
     type: "website",
   },
@@ -35,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Winner Tech",
     description:
-      "Sistemas para quem opera. Conheça Zelo, Alfa, Frutmix e Laço e contrate a Winner Tech.",
+      "Sistemas para quem opera. Conheça Zelo, Alfa, Lume e Laço e contrate a Winner Tech.",
   },
 };
 

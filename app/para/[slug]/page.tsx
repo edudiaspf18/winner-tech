@@ -6,6 +6,8 @@ import {
   NICHES,
   PRODUCTS,
   nicheBySlug,
+  productMatchesKey,
+  waContextName,
 } from "@/lib/content";
 import { buildWaHireHref } from "@/lib/whatsapp";
 import { HireCta } from "@/components/hire-cta";
@@ -38,15 +40,15 @@ export default async function NichePage({ params }: PageProps) {
   if (!niche) notFound();
 
   const products = PRODUCTS.filter((p) =>
-    niche.productNames.includes(p.name),
+    niche.productNames.some((key) => productMatchesKey(p, key)),
   );
-  const primary = products[0]?.name;
+  const primary = products[0] ? waContextName(products[0]) : undefined;
   const href = buildWaHireHref(primary);
   const origin = `niche:${niche.slug}`;
 
   return (
     <PageShell>
-      <section className="relative overflow-hidden px-5 pb-24 pt-[calc(var(--header-h)+3rem)] sm:px-8 sm:pb-32">
+      <section className="relative overflow-hidden px-4 pb-16 pt-[calc(var(--header-h)+env(safe-area-inset-top)+2rem)] sm:px-6 sm:pb-24 sm:pt-[calc(var(--header-h)+3rem)] lg:px-8 lg:pb-32">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-70"
@@ -65,7 +67,7 @@ export default async function NichePage({ params }: PageProps) {
           </p>
           <h1
             data-reveal-child
-            className="font-display mt-5 text-[clamp(2.25rem,5vw,3.75rem)] font-semibold leading-[1.05] tracking-tight"
+            className="font-display mt-4 text-[clamp(1.85rem,7vw,3.75rem)] font-semibold leading-[1.05] tracking-tight sm:mt-5"
             style={{ opacity: 0 }}
           >
             {niche.title}
@@ -97,11 +99,16 @@ export default async function NichePage({ params }: PageProps) {
             ))}
           </ul>
 
-          <div data-reveal-child className="mt-14" style={{ opacity: 0 }}>
+          <div
+            data-reveal-child
+            className="mt-10 flex w-full justify-center sm:mt-14"
+            style={{ opacity: 0 }}
+          >
             <HireCta
               href={href}
               label={CTA_LABEL}
               origin={origin}
+              className="w-full max-w-sm sm:w-auto"
             />
           </div>
         </Reveal>

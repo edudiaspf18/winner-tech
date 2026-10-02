@@ -33,19 +33,34 @@ export const SITES_OFFER = {
     },
     {
       title: "Site institucional",
-      body: "Empresa, sistemas e caminho para contratar — este site é o exemplo.",
+      body: "Empresa, serviços e conversão — mesma clareza do sistema, pronta para o WhatsApp.",
     },
     {
       title: "Mesma mão da operação",
       body: "Quem faz o sistema também faz o site. Sem agência no meio.",
     },
   ],
+  gallery: [
+    {
+      kind: "zelo" as const,
+      label: "Landing · Zelo",
+      caption: "Interface da loja — placa, vaga e status.",
+    },
+    {
+      kind: "lume" as const,
+      label: "Landing · Lume",
+      caption: "Agenda do salão — horário sem duplicar.",
+    },
+  ],
 } as const;
 
 export type Product = {
   name: string;
+  /** Names used for niche matching / WhatsApp context */
+  keys?: string[];
   functionLine: string;
   nicheLine: string;
+  note?: string;
 };
 
 export const PRODUCTS: Product[] = [
@@ -57,15 +72,16 @@ export const PRODUCTS: Product[] = [
   },
   {
     name: "Alfa",
+    keys: ["Alfa", "Frutmix"],
     functionLine:
-      "Cadastro, produção, nota fiscal e relatórios no mesmo sistema.",
+      "Cadastro, produção, nota fiscal e relatórios no mesmo sistema industrial.",
     nicheLine: "Para indústria.",
   },
   {
-    name: "Frutmix",
+    name: "Lume",
     functionLine:
-      "Cadastro, produção, nota fiscal e relatórios no chão industrial.",
-    nicheLine: "Para indústria.",
+      "Agenda do salão sem horário duplicado: cliente, profissional e WhatsApp no mesmo fluxo.",
+    nicheLine: "Para salões de beleza.",
   },
   {
     name: "Laço",
@@ -74,6 +90,15 @@ export const PRODUCTS: Product[] = [
     nicheLine: "Para postos e varejo.",
   },
 ];
+
+export function productMatchesKey(product: Product, key: string) {
+  const keys = product.keys ?? [product.name];
+  return keys.includes(key) || product.name === key;
+}
+
+export function waContextName(product: Product) {
+  return product.keys?.[0] ?? product.name;
+}
 
 export const LACO_VERTICALS = [
   "postos",
@@ -119,11 +144,27 @@ export const ABOUT = {
   eyebrow: "Sobre",
   title: "Sistemas e sites para quem opera.",
   lead:
-    "A Winner Tech desenvolve sistemas para negócios reais — loja automotiva, salão, indústria, posto e varejo — e também faz landing pages e sites institucionais do cliente.",
+    "A Winner Tech faz o sistema que roda o dia a dia do negócio — e o site que apresenta ele com clareza.",
   body: [
-    "Marca pública: Winner Tech. Os produtos Zelo, Lume, Alfa, Frutmix e Laço continuam nos próprios ambientes; este site apresenta e abre a conversa para contratar.",
-    "Sem painel self-service aqui. O caminho é WhatsApp: conversa direta com quem entrega o sistema e o site.",
+    "Zelo, Lume, Alfa e Laço seguem nos próprios ambientes. Este site é a porta de entrada: você vê o que fazemos e chama no WhatsApp para contratar.",
+    "Sem painel self-service. Conversa direta com quem entrega o sistema e o site.",
   ],
+} as const;
+
+/** Public social profiles — footer. */
+export const SOCIAL = {
+  whatsapp: {
+    label: "WhatsApp",
+    href: "https://wa.me/5562998286169",
+  },
+  instagram: {
+    label: "Instagram",
+    href: "https://www.instagram.com/winnertecnologia/",
+  },
+  linkedin: {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/winner-tecnologia-da-informa%C3%A7%C3%A3o",
+  },
 } as const;
 
 export type NichePath = {
@@ -140,6 +181,12 @@ export const NICHES: NichePath[] = [
     title: "Para loja automotiva",
     lead: "Estética, lava-jato e oficina: operação do dia no computador e no celular.",
     productNames: ["Zelo"],
+  },
+  {
+    slug: "salao",
+    title: "Para salão",
+    lead: "Agenda sem horário duplicado: cliente, profissional e WhatsApp no fluxo.",
+    productNames: ["Lume"],
   },
   {
     slug: "industria",
