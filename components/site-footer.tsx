@@ -187,10 +187,6 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div
-        aria-hidden
-        className="font-display pointer-events-none mt-8 select-none whitespace-nowrap text-center text-[clamp(2.25rem,12vw,13rem)] font-semibold uppercase leading-[0.8] tracking-tighter text-[var(--ink)] opacity-[0.04] before:content-['WinnerTech']"
-      />
     </footer>
   );
 }
