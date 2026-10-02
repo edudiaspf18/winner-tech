@@ -12,7 +12,6 @@ O site é uma vitrine. Os produtos continuam nos próprios repositórios e ambie
   </tr>
 </table>
 
-![Interface dos sistemas: Zelo, Laço e Lume](docs/screenshot-interface.jpg)
 
 ## O que o site mostra
 
