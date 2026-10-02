@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/brand-mark";
+import { CookieSettingsButton } from "@/components/cookie-settings-button";
 import {
   BRAND_NAME,
   COMPANY,
@@ -173,9 +174,15 @@ export function SiteFooter() {
           <p>
             © 2026 {BRAND_NAME} · CNPJ {COMPANY.cnpj}
           </p>
-          <Link href="/#topo" className={LINK}>
-            Voltar ao topo ↑
-          </Link>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
+            <Link href="/privacidade" className={LINK}>
+              Privacidade
+            </Link>
+            <CookieSettingsButton className={`${LINK} cursor-pointer`} />
+            <Link href="/#topo" className={LINK}>
+              Voltar ao topo ↑
+            </Link>
+          </div>
         </div>
       </div>
 

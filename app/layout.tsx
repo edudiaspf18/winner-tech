@@ -3,8 +3,8 @@ import { Syne, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { ActiveProductProvider } from "@/components/active-product";
-import { Ga4 } from "@/components/ga4";
-import { MetaPixel } from "@/components/meta-pixel";
+import { Analytics } from "@/components/analytics";
+import { CookieBanner } from "@/components/cookie-banner";
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
 
 const syne = Syne({
@@ -59,8 +59,8 @@ export default function RootLayout({
         <ActiveProductProvider>
           <SmoothScroll>{children}</SmoothScroll>
         </ActiveProductProvider>
-        <Ga4 />
-        <MetaPixel />
+        <Analytics />
+        <CookieBanner />
         <div className="site-grain" aria-hidden="true" />
       </body>
     </html>

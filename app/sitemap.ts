@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: SITE_URL, priority: 1 },
     { url: `${SITE_URL}/sobre`, priority: 0.7 },
+    { url: `${SITE_URL}/privacidade`, priority: 0.3 },
     ...NICHES.map((n) => ({
       url: `${SITE_URL}/para/${n.slug}`,
       priority: 0.8,

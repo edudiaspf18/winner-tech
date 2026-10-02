@@ -99,6 +99,12 @@ public/brand/              marca gráfica
 
 O clique em "Quero contratar" dispara o evento `hire_whatsapp_click` com o parâmetro `origin` (seção ou nicho de onde veio). O evento vai para `window.dataLayer` e, se o GA4 estiver configurado, para o `gtag`. Com o Meta Pixel configurado, o mesmo clique dispara o evento padrão `Contact`. O clique é capturado no código (`lib/whatsapp.ts`), sem depender de GTM.
 
+## Privacidade e cookies (LGPD)
+
+- GA4 e Meta Pixel só carregam depois do aceite no banner de cookies (`components/cookie-banner.tsx`, `components/analytics.tsx`). A escolha fica no `localStorage`.
+- O banner e o botão "Gerenciar cookies" do footer só existem quando `NEXT_PUBLIC_GA_MEASUREMENT_ID` ou `NEXT_PUBLIC_META_PIXEL_ID` estão definidos.
+- Política em `/privacidade`. Revise o texto com o jurídico antes de publicar.
+
 ## SEO e compartilhamento
 
 - Metadata nativa do App Router em `app/layout.tsx`, com Open Graph, Twitter card e canonical. O card do WhatsApp usa `app/opengraph-image.tsx`.
