@@ -4,6 +4,17 @@ Site institucional da Winner Tech. Apresenta os sistemas próprios da empresa (Z
 
 O site é uma vitrine. Os produtos continuam nos próprios repositórios e ambientes; nada deles é reimplementado aqui.
 
+![Hero do site Winner Tech](docs/screenshot-hero.jpg)
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshot-sistemas.jpg" alt="Seção de sistemas: Zelo, Alfa, Lume e Laço" /></td>
+    <td width="50%"><img src="docs/screenshot-sites.jpg" alt="Seção de sites e landing pages" /></td>
+  </tr>
+</table>
+
+![Interface dos sistemas: Zelo, Laço e Lume](docs/screenshot-interface.jpg)
+
 ## O que o site mostra
 
 - **Hero** com a oferta principal: sistema e site do negócio do cliente.
@@ -13,7 +24,7 @@ O site é uma vitrine. Os produtos continuam nos próprios repositórios e ambie
   - **Lume**: agenda sem horário duplicado. Salões de beleza.
   - **Laço**: fidelidade white-label com app do cliente, app da equipe e painel. Postos e varejo.
 - **Sites e landings**: oferta de landing de produto e site institucional.
-- **Cases**: Alfa Papéis e Posto Marinheiro.
+- **Cases**: Brasil Estética (cliente do Zelo), Alfa Papéis e Frutmix (clientes do Alfa) e Posto Marinheiro (cliente do Laço).
 - **Prova aprovada**: depoimentos e métricas só aparecem quando marcados com `approved: true`. Lista vazia significa seção omitida.
 - **Discovery por nicho**: `/para/loja-automotiva`, `/para/salao`, `/para/industria`, `/para/fidelidade`.
 - **Sobre**: `/sobre`.
@@ -55,7 +66,11 @@ Copie `.env.example` para `.env.local`.
 
 | Variável | Descrição |
 |----------|-----------|
+| `NEXT_PUBLIC_SITE_URL` | Origem pública do site (canonical, sitemap, robots, Open Graph). Padrão: `https://winnertech.com.br`. |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | ID de medição do GA4 (`G-XXXXXXXXXX`). Vazio desativa o carregamento do gtag. |
+| `NEXT_PUBLIC_META_PIXEL_ID` | ID do Meta Pixel (só dígitos). Vazio desativa o pixel. |
+
+Em produção, defina `NEXT_PUBLIC_GA_MEASUREMENT_ID` (e o pixel, se houver anúncios). Sem isso o evento é emitido, mas nada é medido.
 
 ## Estrutura
 
@@ -67,6 +82,7 @@ app/
   opengraph-image.tsx      imagem OG
 components/                seções, header, footer, CTA, cena do hero
 lib/
+  site.ts                  URL, título e descrição do site
   content.ts               produtos, nichos, cases, textos, prova aprovada
   whatsapp.ts              link do WhatsApp e evento de analytics
 public/brand/              marca gráfica
@@ -81,11 +97,21 @@ public/brand/              marca gráfica
 
 ## Analytics
 
-O clique em "Quero contratar" dispara o evento `hire_whatsapp_click` com o parâmetro `origin` (seção ou nicho de onde veio). O evento vai para `window.dataLayer` e, se o GA4 estiver configurado, para o `gtag`.
+O clique em "Quero contratar" dispara o evento `hire_whatsapp_click` com o parâmetro `origin` (seção ou nicho de onde veio). O evento vai para `window.dataLayer` e, se o GA4 estiver configurado, para o `gtag`. Com o Meta Pixel configurado, o mesmo clique dispara o evento padrão `Contact`. O clique é capturado no código (`lib/whatsapp.ts`), sem depender de GTM.
+
+## SEO e compartilhamento
+
+- Metadata nativa do App Router em `app/layout.tsx`, com Open Graph, Twitter card e canonical. O card do WhatsApp usa `app/opengraph-image.tsx`.
+- `app/sitemap.ts` e `app/robots.ts` geram `/sitemap.xml` e `/robots.txt`, incluindo as páginas de nicho.
+- Textos centrais em `lib/site.ts`.
 
 ## Acessibilidade e motion
 
 Animações respeitam `prefers-reduced-motion`. Apenas `transform` e `opacity` são animados.
+
+Links que abrem em nova aba (WhatsApp, cases) avisam leitores de tela. Links só com ícone têm `aria-label`.
+
+Imagens usam `next/image`, que aplica lazy loading por padrão. As imagens do site ficam abaixo da primeira dobra; o hero é WebGL, então não há imagem com `priority`.
 
 ## Deploy
 

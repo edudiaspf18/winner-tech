@@ -23,7 +23,7 @@ export function FloatingCta() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={CTA_LABEL}
+      aria-label={`${CTA_LABEL} (abre o WhatsApp em nova aba)`}
       data-origin={origin}
       onClick={() => trackHireClick(origin)}
       style={{

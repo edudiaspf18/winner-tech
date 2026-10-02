@@ -49,7 +49,7 @@ export function Hero() {
             data-hero-anim
             className="mb-4 flex items-center gap-2.5 text-[var(--accent)] sm:mb-6 sm:gap-3"
           >
-            <BrandMark className="h-8 w-8 shrink-0 anim-float sm:h-9 sm:w-9" />
+            <BrandMark className="h-auto w-10 shrink-0 anim-float sm:w-12" />
             <p className="font-display text-xs font-semibold uppercase tracking-[0.22em] sm:text-sm sm:tracking-[0.28em]">
               {BRAND_NAME}
             </p>

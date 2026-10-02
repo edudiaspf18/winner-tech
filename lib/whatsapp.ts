@@ -1,7 +1,6 @@
-import { WA_MESSAGE, waMessageForProduct } from "./content";
+import { WA_PHONE_DIGITS, waMessageForProduct } from "./content";
 
 /** Hire WhatsApp Click-to-Chat — digits locked; never built from request input. */
-const WA_PHONE_DIGITS = "5562998286169";
 
 export function buildWaHireHref(productName?: string | null) {
   const text = waMessageForProduct(productName);
@@ -11,6 +10,7 @@ export function buildWaHireHref(productName?: string | null) {
 export const WA_HIRE_HREF = buildWaHireHref();
 
 type GtagFn = (...args: unknown[]) => void;
+type FbqFn = (...args: unknown[]) => void;
 
 export function trackHireClick(origin: string) {
   if (typeof window === "undefined") return;
@@ -21,11 +21,16 @@ export function trackHireClick(origin: string) {
   const w = window as Window & {
     dataLayer?: Array<Record<string, unknown>>;
     gtag?: GtagFn;
+    fbq?: FbqFn;
   };
   w.dataLayer = w.dataLayer || [];
   w.dataLayer.push(payload);
   // ANAL-02 — also emit GA4 event when gtag is present
   if (typeof w.gtag === "function") {
     w.gtag("event", "hire_whatsapp_click", { origin });
+  }
+  // Meta Pixel standard event when the pixel is loaded
+  if (typeof w.fbq === "function") {
+    w.fbq("track", "Contact", { origin });
   }
 }

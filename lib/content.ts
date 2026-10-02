@@ -9,6 +9,12 @@ export const HERO = {
 export const CTA_LABEL = "Quero contratar";
 
 export const WA_PHONE_DIGITS = "5562998286169";
+export const WA_PHONE_DISPLAY = "(62) 99828-6169";
+
+/** Company registration shown in the footer. */
+export const COMPANY = {
+  cnpj: "34.004.061/0001-49",
+} as const;
 
 export const WA_MESSAGE =
   "Olá, vi os sistemas de vocês e quero conversar.";
@@ -29,7 +35,7 @@ export const SITES_OFFER = {
   points: [
     {
       title: "Landing de produto",
-      body: "Uma página focada: oferta, prova e CTA. Como as landings do Zelo e do Lume.",
+      body: "Uma página focada: oferta, prova e CTA. Como as landings da Charles Veículos e da Aliança Móveis.",
     },
     {
       title: "Site institucional",
@@ -42,14 +48,16 @@ export const SITES_OFFER = {
   ],
   gallery: [
     {
-      kind: "zelo" as const,
-      label: "Landing · Zelo",
-      caption: "Interface da loja — placa, vaga e status.",
+      src: "/landings/charles.jpg",
+      alt: "Landing da Charles Veículos: seminovos em Anápolis-GO, com botão de WhatsApp.",
+      label: "Landing · Charles Veículos",
+      caption: "Seminovos em Anápolis — estoque e WhatsApp na primeira dobra.",
     },
     {
-      kind: "lume" as const,
-      label: "Landing · Lume",
-      caption: "Agenda do salão — horário sem duplicar.",
+      src: "/landings/alianca.jpg",
+      alt: "Landing da Aliança Móveis: cadeiras para escritório em Anápolis-GO, com pedido de orçamento.",
+      label: "Landing · Aliança Móveis",
+      caption: "Catálogo de cadeiras com pedido de orçamento direto no WhatsApp.",
     },
   ],
 } as const;
@@ -72,7 +80,6 @@ export const PRODUCTS: Product[] = [
   },
   {
     name: "Alfa",
-    keys: ["Alfa", "Frutmix"],
     functionLine:
       "Cadastro, produção, nota fiscal e relatórios no mesmo sistema industrial.",
     nicheLine: "Para indústria.",
@@ -121,6 +128,14 @@ export type CaseStudy = {
 
 export const CASES: CaseStudy[] = [
   {
+    product: "Zelo",
+    name: "Brasil Estética",
+    challenge:
+      "Estética automotiva em Anápolis (GO) precisa operar o dia da loja: placa, vaga, PIX e WhatsApp.",
+    solution:
+      "O Zelo concentra essa operação no computador e no celular. Case: Brasil Estética.",
+  },
+  {
     product: "Alfa",
     name: "Alfa Papéis",
     href: "https://alfapapeis.ind.br/",
@@ -128,6 +143,13 @@ export const CASES: CaseStudy[] = [
       "Indústria de papel precisa de cadastro, produção, nota fiscal e relatórios no mesmo fluxo.",
     solution:
       "O Alfa concentra essas operações num sistema industrial. Case público: Alfa Papéis.",
+  },
+  {
+    product: "Alfa",
+    name: "Frutmix",
+    challenge:
+      "Indústria precisa de cadastro, produção, nota fiscal e relatórios no mesmo fluxo.",
+    solution: "Cliente do Alfa: o sistema industrial concentra essas operações.",
   },
   {
     product: "Laço",
@@ -155,7 +177,7 @@ export const ABOUT = {
 export const SOCIAL = {
   whatsapp: {
     label: "WhatsApp",
-    href: "https://wa.me/5562998286169",
+    href: `https://wa.me/${WA_PHONE_DIGITS}`,
   },
   instagram: {
     label: "Instagram",
@@ -192,7 +214,7 @@ export const NICHES: NichePath[] = [
     slug: "industria",
     title: "Para indústria",
     lead: "Cadastro, produção, nota fiscal e relatórios no chão industrial.",
-    productNames: ["Alfa", "Frutmix"],
+    productNames: ["Alfa"],
   },
   {
     slug: "fidelidade",

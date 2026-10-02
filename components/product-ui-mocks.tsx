@@ -136,7 +136,7 @@ export function LumeUiMock() {
 
   return (
     <div
-      className="overflow-hidden rounded-xl border border-[var(--line)] bg-[#f7f4ef] text-[#1a1612]"
+      className="flex h-full flex-col overflow-hidden rounded-xl border border-[var(--line)] bg-[#f7f4ef] text-[#1a1612]"
       aria-label="Interface Lume — agenda do salão"
     >
       <div className="flex items-center justify-between border-b border-black/10 px-4 py-3">
@@ -155,11 +155,11 @@ export function LumeUiMock() {
           Sexta · Amanda e Juliana
         </p>
       </div>
-      <ol className="divide-y divide-black/8 px-2 py-1">
+      <ol className="flex flex-1 flex-col divide-y divide-black/8 px-2 py-1">
         {rows.map((row) => (
           <li
             key={`${row.time}-${row.name}`}
-            className={`flex items-center gap-3 px-2 py-2.5 ${
+            className={`flex flex-1 items-center gap-3 px-2 py-2.5 ${
               row.name === "Almoço" ? "opacity-55" : ""
             }`}
           >

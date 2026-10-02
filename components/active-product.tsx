@@ -27,7 +27,7 @@ export function useActiveProduct() {
   if (!ctx) {
     return {
       activeProduct: null as string | null,
-      setActiveProduct: (_: string | null) => {},
+      setActiveProduct: () => {},
     };
   }
   return ctx;

@@ -4,6 +4,8 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { ActiveProductProvider } from "@/components/active-product";
 import { Ga4 } from "@/components/ga4";
+import { MetaPixel } from "@/components/meta-pixel";
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/site";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -27,22 +29,22 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://winnertech.com.br"),
-  title: "Winner Tech",
-  description:
-    "Sistemas para quem opera. Conheça Zelo, Alfa, Lume e Laço e contrate a Winner Tech.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Winner Tech",
-    description:
-      "Sistemas para quem opera. Conheça Zelo, Alfa, Lume e Laço e contrate a Winner Tech.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    siteName: "Winner Tech",
+    url: "/",
     locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Winner Tech",
-    description:
-      "Sistemas para quem opera. Conheça Zelo, Alfa, Lume e Laço e contrate a Winner Tech.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
 };
 
@@ -58,6 +60,7 @@ export default function RootLayout({
           <SmoothScroll>{children}</SmoothScroll>
         </ActiveProductProvider>
         <Ga4 />
+        <MetaPixel />
         <div className="site-grain" aria-hidden="true" />
       </body>
     </html>

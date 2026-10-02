@@ -47,6 +47,7 @@ export function HireCta({
       <span className="relative z-10" style={{ color: "inherit" }}>
         {label}
       </span>
+      <span className="sr-only"> (abre o WhatsApp em nova aba)</span>
       <span
         aria-hidden
         className="relative z-10 translate-x-0 opacity-70 transition duration-300 group-hover:translate-x-1"

@@ -74,7 +74,7 @@ export function SiteHeader({ homeAnchors = false }: SiteHeaderProps) {
           className="group flex min-w-0 items-center gap-2.5 text-[var(--ink)] no-underline sm:gap-3"
         >
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[var(--surface)] text-[var(--ink)] ring-1 ring-[var(--line)] transition group-hover:text-[var(--accent)] sm:h-10 sm:w-10">
-            <BrandMark className="h-5 w-5 sm:h-6 sm:w-6" />
+            <BrandMark className="h-auto w-5 sm:w-6" />
           </span>
           <span className="font-display truncate text-base font-semibold tracking-tight sm:text-lg lg:text-xl">
             {BRAND_NAME}

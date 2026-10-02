@@ -4,7 +4,7 @@
 
 **Winner Tech**
 
-Site institucional da Winner Tech para apresentar os sistemas próprios e ser contratada. O visitante vê quatro produtos — Zelo, Alfa, Frutmix e Laço — cada um com a função e o nicho em que opera, e sai com um caminho claro para falar com a empresa.
+Site institucional da Winner Tech para apresentar os sistemas próprios e ser contratada. O visitante vê quatro produtos — Zelo, Alfa, Lume e Laço — cada um com a função e o nicho em que opera, e sai com um caminho claro para falar com a empresa.
 
 A marca pública é **Winner Tech**. "Winner Tecnologia da Informação" é o nome antigo e não entra como título do site.
 
@@ -14,8 +14,8 @@ A marca pública é **Winner Tech**. "Winner Tecnologia da Informação" é o no
 
 - **Marca**: nome público Winner Tech — nome antigo fica só como contexto histórico, se aparecer
 - **Produtos**: quatro sistemas nomeados; função e nicho obrigatórios em cada um
-- **Fonte da verdade**: código e landings locais de Zelo e Laço; fala do Eduardo para Alfa e Frutmix; não inventar feature que não esteja numa dessas fontes
-- **Código ausente**: Laço não entra neste git; Frutmix não está no disco; Alfa ao vivo é o site da Alfa Papéis
+- **Fonte da verdade**: código e landings locais de Zelo e Laço; fala do Eduardo para Alfa e seus clientes (Alfa Papéis, Frutmix); não inventar feature que não esteja numa dessas fontes
+- **Código ausente**: Laço não entra neste git; código do Alfa e do Lume não está no disco; Alfa ao vivo é o site da Alfa Papéis
 - **Visual**: movimento e cor forte; proibido o visual padrão de template de IA (gradiente roxo, cards iguais, hero centralizado sem ideia, brutalismo cru, monocromático com acento azul de dashboard)
 - **Ofício visual**: técnicas das referências abaixo. Identidade, layout, logo, copy e paleta dessas marcas ficam de fora.
 - **Idioma**: português

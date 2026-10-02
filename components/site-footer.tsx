@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { BRAND_NAME, NICHES, SOCIAL } from "@/lib/content";
+import { BrandMark } from "@/components/brand-mark";
+import {
+  BRAND_NAME,
+  COMPANY,
+  NICHES,
+  PRODUCTS,
+  SOCIAL,
+  WA_PHONE_DISPLAY,
+} from "@/lib/content";
 
 const SOCIAL_ITEMS = [
   {
@@ -54,86 +62,128 @@ const SOCIAL_ITEMS = [
   },
 ] as const;
 
+const COLUMN_TITLE =
+  "font-display text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]";
+const LINK =
+  "inline-block py-0.5 transition-all duration-200 hover:text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]";
+
 export function SiteFooter() {
   return (
-    <footer className="border-t border-[var(--line)] px-4 pb-[calc(5.5rem+env(safe-area-inset-bottom,0px))] pt-10 sm:px-6 sm:pb-14 sm:pt-14 lg:px-8">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
-        <div className="min-w-0">
-          <p className="font-display text-base font-semibold tracking-tight text-[var(--ink)] sm:text-lg">
-            {BRAND_NAME}
-          </p>
-          <p className="mt-2 max-w-sm text-sm leading-relaxed text-[var(--ink-muted)]">
-            Sistemas para quem opera. Contrate pelo WhatsApp.
-          </p>
-          <ul className="mt-4 flex items-center gap-2.5">
-            {SOCIAL_ITEMS.map((s) => (
-              <li key={s.label}>
-                <a
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="grid h-10 w-10 place-items-center rounded-xl text-[var(--ink-muted)] ring-1 ring-[var(--line)] transition hover:bg-[var(--surface)] hover:text-[var(--ink)]"
-                >
-                  {s.icon}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="grid grid-cols-2 gap-8 text-sm sm:flex sm:flex-wrap sm:gap-x-10 sm:gap-y-6">
-          <div>
-            <p className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">
-              Landing pages
+    <footer className="relative overflow-hidden border-t border-[var(--line)] pb-[calc(5.5rem+env(safe-area-inset-bottom,0px))] pt-12 sm:pb-10 sm:pt-16">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,2fr)] lg:gap-16">
+          <div className="min-w-0">
+            <Link
+              href="/#topo"
+              className="inline-flex items-center gap-3 text-[var(--accent)] transition-all duration-200 hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
+              aria-label={`${BRAND_NAME} — voltar ao topo`}
+            >
+              <BrandMark className="h-auto w-14" />
+              <span className="font-display text-xl font-semibold tracking-tight text-[var(--ink)]">
+                {BRAND_NAME}
+              </span>
+            </Link>
+            <p className="font-display mt-6 max-w-sm text-2xl font-semibold leading-tight tracking-tight text-[var(--ink)] sm:text-3xl">
+              Sistemas e sites para quem opera.
             </p>
-            <ul className="mt-3 space-y-2.5 text-[var(--ink-muted)]">
-              {NICHES.map((n) => (
-                <li key={n.slug}>
-                  <Link
-                    href={`/para/${n.slug}`}
-                    className="inline-block py-0.5 transition hover:text-[var(--ink)]"
-                  >
-                    {n.title}
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[var(--ink-muted)]">
+              Quem faz o sistema também faz o site. Conversa direta, sem
+              agência no meio.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 text-sm sm:grid-cols-4">
+            <nav aria-label="Sistemas">
+              <p className={COLUMN_TITLE}>Sistemas</p>
+              <ul className="mt-4 space-y-2.5 text-[var(--ink-muted)]">
+                {PRODUCTS.map((p) => (
+                  <li key={p.name}>
+                    <Link href="/#sistemas" className={LINK}>
+                      {p.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <nav aria-label="Por nicho">
+              <p className={COLUMN_TITLE}>Por nicho</p>
+              <ul className="mt-4 space-y-2.5 text-[var(--ink-muted)]">
+                {NICHES.map((n) => (
+                  <li key={n.slug}>
+                    <Link href={`/para/${n.slug}`} className={LINK}>
+                      {n.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <nav aria-label="Empresa">
+              <p className={COLUMN_TITLE}>Empresa</p>
+              <ul className="mt-4 space-y-2.5 text-[var(--ink-muted)]">
+                <li>
+                  <Link href="/sobre" className={LINK}>
+                    Sobre
                   </Link>
                 </li>
-              ))}
-              <li>
-                <a
-                  href="/#sites"
-                  className="inline-block py-0.5 transition hover:text-[var(--ink)]"
-                >
-                  Sites & landings
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">
-              Empresa
-            </p>
-            <ul className="mt-3 space-y-2.5 text-[var(--ink-muted)]">
-              <li>
-                <Link
-                  href="/sobre"
-                  className="inline-block py-0.5 transition hover:text-[var(--ink)]"
-                >
-                  Sobre
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="/#contratar"
-                  className="inline-block py-0.5 transition hover:text-[var(--ink)]"
-                >
-                  Contratar
-                </a>
-              </li>
-            </ul>
+                <li>
+                  <Link href="/#cases" className={LINK}>
+                    Cases
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#sites" className={LINK}>
+                    Sites & landings
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#contratar" className={LINK}>
+                    Contratar
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+
+            <div>
+              <p className={COLUMN_TITLE}>Contato</p>
+              <ul className="mt-4 space-y-2.5 text-[var(--ink-muted)]">
+                {SOCIAL_ITEMS.map((s) => (
+                  <li key={s.label}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${LINK} inline-flex items-center gap-2.5`}
+                    >
+                      {s.icon}
+                      <span>
+                        {s.label === "WhatsApp" ? WA_PHONE_DISPLAY : s.label}
+                      </span>
+                      <span className="sr-only"> (abre em nova aba)</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
+
+        <div className="mt-14 flex flex-col gap-3 border-t border-[var(--line)] pt-6 text-[0.72rem] tracking-wide text-[var(--ink-muted)] sm:mt-16 sm:flex-row sm:items-center sm:justify-between sm:text-xs">
+          <p>
+            © 2026 {BRAND_NAME} · CNPJ {COMPANY.cnpj}
+          </p>
+          <Link href="/#topo" className={LINK}>
+            Voltar ao topo ↑
+          </Link>
+        </div>
       </div>
-      <p className="mx-auto mt-10 max-w-7xl border-t border-[var(--line)] pt-5 text-center text-[0.7rem] tracking-wide text-[var(--ink-muted)] sm:mt-12 sm:pt-6 sm:text-xs">
-        Desenvolvido por Winner Tech · 2026
+
+      <p
+        aria-hidden
+        className="font-display pointer-events-none mt-8 select-none whitespace-nowrap text-center text-[clamp(3rem,15.5vw,13rem)] font-semibold uppercase leading-[0.8] tracking-tighter text-[var(--ink)] opacity-[0.04]"
+      >
+        WinnerTech
       </p>
     </footer>
   );

@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { CTA_LABEL, SITES_OFFER } from "@/lib/content";
 import { WA_HIRE_HREF } from "@/lib/whatsapp";
 import { HireCta } from "@/components/hire-cta";
-import { LumeUiMock, ZeloUiMock } from "@/components/product-ui-mocks";
 import { Reveal } from "@/components/reveal";
 
 export function SitesOffer() {
@@ -51,8 +51,14 @@ export function SitesOffer() {
                 <div className="border-b border-[var(--line)] px-4 py-2.5 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[var(--ink-muted)] sm:text-xs sm:tracking-[0.2em]">
                   {item.label}
                 </div>
-                <div className="relative min-h-[12rem] flex-1 bg-[var(--bg)] p-3 sm:min-h-[14rem] sm:p-4">
-                  {item.kind === "zelo" ? <ZeloUiMock /> : <LumeUiMock />}
+                <div className="relative aspect-[1440/750] w-full flex-1 bg-[var(--bg)]">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 1024px) 448px, 100vw"
+                    className="object-cover object-top"
+                  />
                 </div>
                 <figcaption className="border-t border-[var(--line)] px-4 py-3 text-sm text-[var(--ink-muted)]">
                   {item.caption}

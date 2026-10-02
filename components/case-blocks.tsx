@@ -1,6 +1,9 @@
 "use client";
 
-import { CASES, LACO_VERTICALS } from "@/lib/content";
+import Image from "next/image";
+import { CASES, CTA_LABEL, LACO_VERTICALS } from "@/lib/content";
+import { WA_HIRE_HREF } from "@/lib/whatsapp";
+import { HireCta } from "@/components/hire-cta";
 import { LumeUiMock, ZeloUiMock } from "@/components/product-ui-mocks";
 import { Reveal } from "@/components/reveal";
 
@@ -37,6 +40,7 @@ export function CaseBlocks() {
                       className="underline-offset-4 hover:underline"
                     >
                       {c.name}
+                      <span className="sr-only"> (abre em nova aba)</span>
                     </a>
                   ) : (
                     c.name
@@ -94,35 +98,56 @@ export function ProofPanels() {
             Interface
           </p>
           <h2 className="font-display mt-3 max-w-3xl text-[1.65rem] font-semibold tracking-tight text-[var(--ink)] sm:mt-4 sm:text-3xl lg:text-4xl">
-            Zelo e Lume — telas das landings de produto.
+            Pare de operar no improviso. Tenha o seu sistema.
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-[var(--ink-muted)] sm:mt-4 sm:text-base">
-            Interface como nas landings do Zelo e do Lume. Alfa só no case
-            público — sem tela inventada.
+            Veja as telas por dentro. Escolha o sistema do seu negócio e chame a
+            gente no WhatsApp para contratar.
           </p>
         </Reveal>
 
         <div className="mt-8 grid gap-5 sm:mt-12 sm:gap-8 lg:grid-cols-2">
-          <Reveal>
-            <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
-              <div className="border-b border-[var(--line)] px-5 py-3 text-xs uppercase tracking-[0.2em] text-[var(--ink-muted)]">
-                Zelo · Tela Hoje
-              </div>
-              <div className="p-4 sm:p-5">
-                <ZeloUiMock />
-              </div>
-              <figcaption className="border-t border-[var(--line)] px-5 py-4 text-sm text-[var(--ink-muted)]">
-                Placa, vaga e status — mesmo palco da landing do Zelo.
-              </figcaption>
-            </figure>
-          </Reveal>
+          <div className="flex flex-col gap-5 sm:gap-8">
+            <Reveal>
+              <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
+                <div className="border-b border-[var(--line)] px-5 py-3 text-xs uppercase tracking-[0.2em] text-[var(--ink-muted)]">
+                  Zelo · Tela Hoje
+                </div>
+                <div className="p-4 sm:p-5">
+                  <ZeloUiMock />
+                </div>
+                <figcaption className="border-t border-[var(--line)] px-5 py-4 text-sm text-[var(--ink-muted)]">
+                  Placa, vaga e status — mesmo palco da landing do Zelo.
+                </figcaption>
+              </figure>
+            </Reveal>
+            <Reveal>
+              <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
+                <div className="border-b border-[var(--line)] px-5 py-3 text-xs uppercase tracking-[0.2em] text-[var(--ink-muted)]">
+                  Laço · App do cliente
+                </div>
+                <div className="relative aspect-[740/560] w-full bg-[var(--bg)]">
+                  <Image
+                    src="/landings/laco-app.jpg"
+                    alt="App do cliente do Laço em três marcas: QR do cliente, saldo e meta do mês."
+                    fill
+                    sizes="(min-width: 1024px) 560px, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="border-t border-[var(--line)] px-5 py-4 text-sm text-[var(--ink-muted)]">
+                  Fidelidade com a marca do negócio — QR, saldo e meta do mês.
+                </figcaption>
+              </figure>
+            </Reveal>
+          </div>
 
-          <Reveal>
-            <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
+          <Reveal className="h-full">
+            <figure className="flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)]">
               <div className="border-b border-[var(--line)] px-5 py-3 text-xs uppercase tracking-[0.2em] text-[var(--ink-muted)]">
                 Lume · Agenda do salão
               </div>
-              <div className="p-4 sm:p-5">
+              <div className="flex-1 p-4 sm:p-5">
                 <LumeUiMock />
               </div>
               <figcaption className="border-t border-[var(--line)] px-5 py-4 text-sm text-[var(--ink-muted)]">
@@ -131,6 +156,15 @@ export function ProofPanels() {
             </figure>
           </Reveal>
         </div>
+
+        <Reveal className="mt-8 flex justify-center sm:mt-12">
+          <HireCta
+            href={WA_HIRE_HREF}
+            label={CTA_LABEL}
+            origin="interface"
+            className="w-full max-w-sm sm:w-auto"
+          />
+        </Reveal>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { W_MARK_ASPECT, W_MARK_PATH, W_MARK_VIEWBOX } from "@/lib/brand";
 
 export const alt = "Winner Tech — sistemas e sites para quem opera";
 export const size = { width: 1200, height: 630 };
@@ -21,22 +22,13 @@ export default function OpenGraphImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div
-            style={{
-              width: 48,
-              height: 48,
-              background: "#a8bd72",
-              borderRadius: 12,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#10140c",
-              fontSize: 28,
-              fontWeight: 700,
-            }}
+          <svg
+            width={72}
+            height={Math.round(72 / W_MARK_ASPECT)}
+            viewBox={W_MARK_VIEWBOX}
           >
-            W
-          </div>
+            <path fill="#ffffff" fillRule="evenodd" d={W_MARK_PATH} />
+          </svg>
           <span style={{ fontSize: 28, fontWeight: 600 }}>Winner Tech</span>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
