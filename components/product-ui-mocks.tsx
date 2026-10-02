@@ -136,11 +136,11 @@ export function LumeUiMock() {
 
   return (
     <div
-      className="flex h-full flex-col overflow-hidden rounded-xl border border-[var(--line)] bg-[#f7f4ef] text-[#1a1612]"
+      className="@container flex h-full flex-col overflow-hidden rounded-xl border border-[var(--line)] bg-[#f7f4ef] text-[#1a1612]"
       aria-label="Interface Lume — agenda do salão"
     >
-      <div className="flex items-center justify-between border-b border-black/10 px-4 py-3">
-        <div className="flex items-center gap-2">
+      <div className="flex items-center justify-between gap-3 border-b border-black/10 px-4 py-3">
+        <div className="flex shrink-0 items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/proof/lume-marca.svg"
@@ -149,9 +149,11 @@ export function LumeUiMock() {
             height={22}
             className="h-5 w-auto"
           />
-          <span className="text-[11px] text-black/45">WinnerTech</span>
+          <span className="hidden text-[11px] text-black/45 @md:inline">
+            WinnerTech
+          </span>
         </div>
-        <p className="text-[11px] font-medium text-black/55">
+        <p className="min-w-0 truncate text-right text-[11px] font-medium text-black/55">
           Sexta · Amanda e Juliana
         </p>
       </div>

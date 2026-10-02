@@ -45,6 +45,7 @@ export function HeroDevices({ className = "" }: { className?: string }) {
     const status = el.querySelectorAll<HTMLElement>("[data-status]");
     const slots = el.querySelectorAll<HTMLElement>("[data-slot]");
 
+    const loops: gsap.core.Tween[] = [];
     const ctx = gsap.context(() => {
       gsap.fromTo(
         [site, phone],
@@ -59,26 +60,26 @@ export function HeroDevices({ className = "" }: { className?: string }) {
       );
 
       if (window.matchMedia("(min-width: 1024px)").matches) {
-        gsap.to(site, {
+        loops.push(gsap.to(site, {
           y: "-=8",
           duration: 3.6,
           yoyo: true,
           repeat: -1,
           ease: "sine.inOut",
           delay: 1,
-        });
-        gsap.to(phone, {
+        }));
+        loops.push(gsap.to(phone, {
           y: "-=10",
           duration: 4.1,
           yoyo: true,
           repeat: -1,
           ease: "sine.inOut",
           delay: 1.2,
-        });
+        }));
       }
 
       if (bars.length) {
-        gsap.fromTo(
+        loops.push(gsap.fromTo(
           bars,
           { scaleX: 0.4, opacity: 0.3 },
           {
@@ -91,29 +92,38 @@ export function HeroDevices({ className = "" }: { className?: string }) {
             repeatDelay: 2.2,
             yoyo: true,
           },
-        );
+        ));
       }
 
       if (status.length) {
-        gsap.to(status, {
+        loops.push(gsap.to(status, {
           opacity: 0.4,
           duration: 0.85,
           stagger: { each: 0.3, repeat: -1, yoyo: true },
           ease: "sine.inOut",
-        });
+        }));
       }
 
       if (slots.length) {
-        gsap.to(slots, {
+        loops.push(gsap.to(slots, {
           borderColor: "color-mix(in oklab, #5fb8a8 50%, transparent)",
           duration: 1.1,
           stagger: { each: 0.5, repeat: -1, yoyo: true },
           ease: "sine.inOut",
-        });
+        }));
       }
     }, el);
 
-    return () => ctx.revert();
+    // Endless loops only run while the devices are on screen.
+    const io = new IntersectionObserver(([entry]) => {
+      for (const t of loops) t.paused(!entry.isIntersecting);
+    });
+    io.observe(el);
+
+    return () => {
+      io.disconnect();
+      ctx.revert();
+    };
   }, [reduced]);
 
   return (

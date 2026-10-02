@@ -158,7 +158,7 @@ export function SiteFooter() {
                       className={`${LINK} inline-flex items-center gap-2.5`}
                     >
                       {s.icon}
-                      <span>
+                      <span className="whitespace-nowrap">
                         {s.label === "WhatsApp" ? WA_PHONE_DISPLAY : s.label}
                       </span>
                       <span className="sr-only"> (abre em nova aba)</span>
@@ -172,7 +172,8 @@ export function SiteFooter() {
 
         <div className="mt-14 flex flex-col gap-3 border-t border-[var(--line)] pt-6 text-[0.72rem] tracking-wide text-[var(--ink-muted)] sm:mt-16 sm:flex-row sm:items-center sm:justify-between sm:text-xs">
           <p>
-            © 2026 {BRAND_NAME} · CNPJ {COMPANY.cnpj}
+            © 2026 {BRAND_NAME} · CNPJ {COMPANY.cnpj} ·{" "}
+            <span className="whitespace-nowrap">{COMPANY.city}</span>
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
             <Link href="/privacidade" className={LINK}>
@@ -186,12 +187,10 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <p
+      <div
         aria-hidden
-        className="font-display pointer-events-none mt-8 select-none whitespace-nowrap text-center text-[clamp(3rem,15.5vw,13rem)] font-semibold uppercase leading-[0.8] tracking-tighter text-[var(--ink)] opacity-[0.04]"
-      >
-        WinnerTech
-      </p>
+        className="font-display pointer-events-none mt-8 select-none whitespace-nowrap text-center text-[clamp(2.25rem,12vw,13rem)] font-semibold uppercase leading-[0.8] tracking-tighter text-[var(--ink)] opacity-[0.04] before:content-['WinnerTech']"
+      />
     </footer>
   );
 }

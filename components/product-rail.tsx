@@ -46,7 +46,7 @@ function RailCard({
       >
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full blur-3xl transition duration-500 group-hover:scale-110"
+          className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full blur-2xl sm:h-40 sm:w-40 sm:blur-3xl transition duration-500 group-hover:scale-110"
           style={{ background: accent, opacity: 0.35 }}
         />
         <div className="relative">

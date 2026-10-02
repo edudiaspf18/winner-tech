@@ -14,6 +14,7 @@ export const WA_PHONE_DISPLAY = "(62) 99828-6169";
 /** Company registration shown in the footer. */
 export const COMPANY = {
   cnpj: "34.004.061/0001-49",
+  city: "Anápolis - GO",
 } as const;
 
 export const WA_MESSAGE =

@@ -109,6 +109,10 @@ O clique em "Quero contratar" dispara o evento `hire_whatsapp_click` com o parâ
 - `app/sitemap.ts` e `app/robots.ts` geram `/sitemap.xml` e `/robots.txt`, incluindo as páginas de nicho.
 - Textos centrais em `lib/site.ts`.
 
+## Performance
+
+Lighthouse mobile (build de produção, 4G com CPU 4x mais lenta): Performance 94, Acessibilidade 100, Boas práticas 100, SEO 100. Em mobile o scroll é nativo (sem Lenis), o overlay de grão fica só no desktop e os loops infinitos do hero pausam fora da tela.
+
 ## Acessibilidade e motion
 
 Animações respeitam `prefers-reduced-motion`. Apenas `transform` e `opacity` são animados.

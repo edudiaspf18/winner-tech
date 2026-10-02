@@ -9,8 +9,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    // Address-bar show/hide on phones must not trigger a full ScrollTrigger refresh.
+    ScrollTrigger.config({ ignoreMobileResize: true });
+
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) return;
+    // Touch devices already scroll natively and smoothly: skip the JS smoother.
+    const coarse = window.matchMedia("(pointer: coarse)").matches;
+    if (reduced || coarse) return;
 
     const lenis = new Lenis({
       duration: 1.15,

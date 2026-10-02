@@ -111,6 +111,29 @@ a {
   font-family: var(--font-display);
 }
 
+/* Full-viewport blend overlay is costly on touch GPUs: desktop only. */
+@media (max-width: 1023px), (pointer: coarse) {
+  .site-grain {
+    display: none;
+  }
+}
+
+.hero-in {
+  animation: hero-in 0.85s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation-delay: calc(var(--i, 0) * 0.1s);
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .site-grain {
   pointer-events: none;
   position: fixed;
@@ -186,7 +209,13 @@ a {
 
 .rail-card-float {
   animation: float-y-soft 4.2s ease-in-out infinite;
-  will-change: transform;
+}
+
+/* Stacked cards on phones: no endless compositing */
+@media (max-width: 639px) {
+  .rail-card-float {
+    animation: none;
+  }
 }
 
 .anim-pulse-ring {
@@ -207,7 +236,8 @@ a {
   .anim-float,
   .rail-card-float,
   .anim-pulse-ring,
-  .anim-marquee {
+  .anim-marquee,
+  .hero-in {
     animation: none !important;
   }
 
